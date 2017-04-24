@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-04-22T10:04:53.000Z</updated>
+  <updated>2017-04-24T04:00:30.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -20,21 +20,98 @@
     <link href="https://zwting.github.io/2017/04/22/numberConvert/"/>
     <id>https://zwting.github.io/2017/04/22/numberConvert/</id>
     <published>2017-04-22T10:03:02.000Z</published>
-    <updated>2017-04-22T10:04:53.000Z</updated>
+    <updated>2017-04-24T04:00:30.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><h4 id="一-不包含数字0的情况"><a href="#一-不包含数字0的情况" class="headerlink" title="一.不包含数字0的情况"></a>一.不包含数字0的情况</h4><ol>
 <li>如有数字<code>12345678</code> 读作: 一千二百三十四万五千六百七十八</li>
-<li><p>可以发现规律如下:</p>
+<li>可以发现规律如下:</li>
+</ol>
 <blockquote>
-<p> <code>一</code>千<code>二</code>百<code>三</code>十<code>四</code>万<code>五</code>千<code>六</code>百<code>七</code>十<code>八</code>, 首先, 每一位的数字都会发音, 这个发音列表如下</p>
+<p> <code>一</code>千<code>二</code>百<code>三</code>十<code>四</code>万<code>五</code>千<code>六</code>百<code>七</code>十<code>八</code>, 首先, 每一位的数字都会发音, 这个发音列表下</p>
 </blockquote>
-<p>|1|2|3|4|5|6|7|8|9|0|<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>|一|二|三|四|五|六|七|八|九|零|</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">7</th>
+<th style="text-align:center">8</th>
+<th style="text-align:center">9</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">一</td>
+<td style="text-align:center">二</td>
+<td style="text-align:center">三</td>
+<td style="text-align:center">四</td>
+<td style="text-align:center">五</td>
+<td style="text-align:center">六</td>
+<td style="text-align:center">七</td>
+<td style="text-align:center">八</td>
+<td style="text-align:center">九</td>
+<td style="text-align:center">零</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>其次就是<code>千,百,十,万,千,百,十</code>,同样,列表如下</p>
 </blockquote>
-<p>|数字|1|2|3|4|5|6|7|8|<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>|索引|0|1|2|3|4|5|6|7|<br>|对应单位:|千|百|十|万|千|百|十|个|<br>|自身发音:|一|二|三|四|五|六|七|八|</p>
-</li>
-</ol>
+<table>
+<thead>
+<tr>
+<th>数字</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>索引</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>对应单位:</td>
+<td>千</td>
+<td>百</td>
+<td>十</td>
+<td>万</td>
+<td>千</td>
+<td>百</td>
+<td>十</td>
+<td>个</td>
+</tr>
+<tr>
+<td>自身发音:</td>
+<td>一</td>
+<td>二</td>
+<td>三</td>
+<td>四</td>
+<td>五</td>
+<td>六</td>
+<td>七</td>
+<td>八</td>
+</tr>
+</tbody>
+</table>
 <blockquote>
 <p>转换方法: 直接发音和单位相间连接,最后一位不处理,即不添加<code>个</code>字 </p>
 </blockquote>
