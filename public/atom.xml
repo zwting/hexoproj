@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://zwting.github.io/"/>
+  <updated>2017-04-22T10:04:53.000Z</updated>
+  <id>https://zwting.github.io/</id>
+  
+  <author>
+    <name>zwting</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将阿拉伯数字转换成大写形式(非汉字形式)</title>
+    <link href="https://zwting.github.io/2017/04/22/numberConvert/"/>
+    <id>https://zwting.github.io/2017/04/22/numberConvert/</id>
+    <published>2017-04-22T10:03:02.000Z</published>
+    <updated>2017-04-22T10:04:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><h4 id="一-不包含数字0的情况"><a href="#一-不包含数字0的情况" class="headerlink" title="一.不包含数字0的情况"></a>一.不包含数字0的情况</h4><ol>
+<li>如有数字<code>12345678</code> 读作: 一千二百三十四万五千六百七十八</li>
+<li><p>可以发现规律如下:</p>
+<blockquote>
+<p> <code>一</code>千<code>二</code>百<code>三</code>十<code>四</code>万<code>五</code>千<code>六</code>百<code>七</code>十<code>八</code>, 首先, 每一位的数字都会发音, 这个发音列表如下</p>
+</blockquote>
+<p>|1|2|3|4|5|6|7|8|9|0|<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>|一|二|三|四|五|六|七|八|九|零|</p>
+<blockquote>
+<p>其次就是<code>千,百,十,万,千,百,十</code>,同样,列表如下</p>
+</blockquote>
+<p>|数字|1|2|3|4|5|6|7|8|<br>|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|<br>|索引|0|1|2|3|4|5|6|7|<br>|对应单位:|千|百|十|万|千|百|十|个|<br>|自身发音:|一|二|三|四|五|六|七|八|</p>
+</li>
+</ol>
+<blockquote>
+<p>转换方法: 直接发音和单位相间连接,最后一位不处理,即不添加<code>个</code>字 </p>
+</blockquote>
+<h4 id="二-包含数字零的情况"><a href="#二-包含数字零的情况" class="headerlink" title="二.包含数字零的情况"></a>二.包含数字零的情况</h4><ol>
+<li>数字0在中间且不连续</li>
+<li>数字0在中间连续</li>
+<li>数字0在末尾(一个或多个)</li>
+<li>中间末尾都有,中间连续</li>
+<li>中间末尾都有,中间不连续</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;h4 id=&quot;一-不包含数字0的情况&quot;&gt;&lt;a href=&quot;#一-不包含数字0的情况&quot; class=&quot;headerlink&quot; title=&quot;一.不
+    
+    </summary>
+    
+    
+      <category term="杂项" scheme="https://zwting.github.io/tags/%E6%9D%82%E9%A1%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://zwting.github.io/2017/04/20/hello-world/"/>
+    <id>https://zwting.github.io/2017/04/20/hello-world/</id>
+    <published>2017-04-20T05:21:42.000Z</published>
+    <updated>2017-04-20T05:21:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《OpenGL编程指南》 第二章 着色器与OpenGL</title>
+    <link href="https://zwting.github.io/2017/04/19/hello/"/>
+    <id>https://zwting.github.io/2017/04/19/hello/</id>
+    <published>2017-04-19T06:24:52.000Z</published>
+    <updated>2017-04-21T05:47:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-OpenGL的可编程管线"><a href="#1-OpenGL的可编程管线" class="headerlink" title="1. OpenGL的可编程管线"></a>1. OpenGL的可编程管线</h3><ul>
+<li><h4 id="顶点着色阶段"><a href="#顶点着色阶段" class="headerlink" title="顶点着色阶段"></a><strong>顶点着色阶段</strong></h4>将接受你在顶点缓存对象中给出的顶点数据, 独立处理每个顶点– <strong><em>原书</em></strong></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-OpenGL的可编程管线&quot;&gt;&lt;a href=&quot;#1-OpenGL的可编程管线&quot; class=&quot;headerlink&quot; title=&quot;1. OpenGL的可编程管线&quot;&gt;&lt;/a&gt;1. OpenGL的可编程管线&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;h4 id=&quot;顶点着色阶段
+    
+    </summary>
+    
+    
+      <category term="OpenGL, 计算机图形学" scheme="https://zwting.github.io/tags/OpenGL-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+</feed>
