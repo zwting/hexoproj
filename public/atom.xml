@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title></title>
-  
+  <title>有想法更要有行动</title>
+  <subtitle>事在人为</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-04-24T04:00:30.000Z</updated>
+  <updated>2017-04-20T05:21:42.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -14,126 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>将阿拉伯数字转换成大写形式(非汉字形式)</title>
-    <link href="https://zwting.github.io/2017/04/22/numberConvert/"/>
-    <id>https://zwting.github.io/2017/04/22/numberConvert/</id>
-    <published>2017-04-22T10:03:02.000Z</published>
-    <updated>2017-04-24T04:00:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><h4 id="一-不包含数字0的情况"><a href="#一-不包含数字0的情况" class="headerlink" title="一.不包含数字0的情况"></a>一.不包含数字0的情况</h4><ol>
-<li>如有数字<code>12345678</code> 读作: 一千二百三十四万五千六百七十八</li>
-<li>可以发现规律如下:</li>
-</ol>
-<blockquote>
-<p> <code>一</code>千<code>二</code>百<code>三</code>十<code>四</code>万<code>五</code>千<code>六</code>百<code>七</code>十<code>八</code>, 首先, 每一位的数字都会发音, 这个发音列表下</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-<th style="text-align:center">6</th>
-<th style="text-align:center">7</th>
-<th style="text-align:center">8</th>
-<th style="text-align:center">9</th>
-<th style="text-align:center">0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">一</td>
-<td style="text-align:center">二</td>
-<td style="text-align:center">三</td>
-<td style="text-align:center">四</td>
-<td style="text-align:center">五</td>
-<td style="text-align:center">六</td>
-<td style="text-align:center">七</td>
-<td style="text-align:center">八</td>
-<td style="text-align:center">九</td>
-<td style="text-align:center">零</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>其次就是<code>千,百,十,万,千,百,十</code>,同样,列表如下</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>数字</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>索引</td>
-<td>0</td>
-<td>1</td>
-<td>2</td>
-<td>3</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>7</td>
-</tr>
-<tr>
-<td>对应单位:</td>
-<td>千</td>
-<td>百</td>
-<td>十</td>
-<td>万</td>
-<td>千</td>
-<td>百</td>
-<td>十</td>
-<td>个</td>
-</tr>
-<tr>
-<td>自身发音:</td>
-<td>一</td>
-<td>二</td>
-<td>三</td>
-<td>四</td>
-<td>五</td>
-<td>六</td>
-<td>七</td>
-<td>八</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>转换方法: 直接发音和单位相间连接,最后一位不处理,即不添加<code>个</code>字 </p>
-</blockquote>
-<h4 id="二-包含数字零的情况"><a href="#二-包含数字零的情况" class="headerlink" title="二.包含数字零的情况"></a>二.包含数字零的情况</h4><ol>
-<li>数字0在中间且不连续</li>
-<li>数字0在中间连续</li>
-<li>数字0在末尾(一个或多个)</li>
-<li>中间末尾都有,中间连续</li>
-<li>中间末尾都有,中间不连续</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;分析&quot;&gt;&lt;a href=&quot;#分析&quot; class=&quot;headerlink&quot; title=&quot;分析&quot;&gt;&lt;/a&gt;分析&lt;/h3&gt;&lt;h4 id=&quot;一-不包含数字0的情况&quot;&gt;&lt;a href=&quot;#一-不包含数字0的情况&quot; class=&quot;headerlink&quot; title=&quot;一.不
-    
-    </summary>
-    
-    
-      <category term="杂项" scheme="https://zwting.github.io/tags/%E6%9D%82%E9%A1%B9/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -166,11 +46,13 @@
     <title>《OpenGL编程指南》 第二章 着色器与OpenGL</title>
     <link href="https://zwting.github.io/2017/04/19/hello/"/>
     <id>https://zwting.github.io/2017/04/19/hello/</id>
-    <published>2017-04-19T06:24:52.000Z</published>
-    <updated>2017-04-21T05:47:24.000Z</updated>
+    <published>2017-04-19T06:24:00.000Z</published>
+    <updated>2017-04-26T05:08:28.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-OpenGL的可编程管线"><a href="#1-OpenGL的可编程管线" class="headerlink" title="1. OpenGL的可编程管线"></a>1. OpenGL的可编程管线</h3><ul>
-<li><h4 id="顶点着色阶段"><a href="#顶点着色阶段" class="headerlink" title="顶点着色阶段"></a><strong>顶点着色阶段</strong></h4>将接受你在顶点缓存对象中给出的顶点数据, 独立处理每个顶点– <strong><em>原书</em></strong></li>
+<li><h4 id="顶点着色阶段"><a href="#顶点着色阶段" class="headerlink" title="顶点着色阶段"></a><strong>顶点着色阶段</strong></h4>  将接受你在顶点缓存对象中给出的顶点数据, 独立处理每个顶点– <strong><em>原书</em></strong></li>
+<li><h4 id="细分着色阶段"><a href="#细分着色阶段" class="headerlink" title="细分着色阶段"></a><strong>细分着色阶段</strong></h4>  是一个可选的阶段, 与应用程序中显式地指定几何图元的方法不同, 它会在OpenGL管线内部生成新的几何体. 这个阶段启用之后, 会受到来自顶点着色阶段的输出数据, 并且对收到的顶点进行进一步的处理.</li>
+<li><h4 id="几何着色阶段"><a href="#几何着色阶段" class="headerlink" title="几何着色阶段"></a><strong>几何着色阶段</strong></h4>  也是一个可选阶段</li>
 </ul>
 ]]></content>
     
@@ -180,6 +62,8 @@
 &lt;li&gt;&lt;h4 id=&quot;顶点着色阶段
     
     </summary>
+    
+      <category term="OpenGL" scheme="https://zwting.github.io/categories/OpenGL/"/>
     
     
       <category term="OpenGL, 计算机图形学" scheme="https://zwting.github.io/tags/OpenGL-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>

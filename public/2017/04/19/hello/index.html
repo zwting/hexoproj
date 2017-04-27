@@ -12,7 +12,7 @@
         
             《OpenGL编程指南》 第二章 着色器与OpenGL | 
         
-        null
+        有想法更要有行动
     </title>
 
     <!-- Meta & Info -->
@@ -32,12 +32,12 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="zwting">
     <meta name="description" content="记录学习的点点滴滴">
-    <meta name="keywords" content="Unity3D, OpenGL, 计算机图形学,OpenGL, 计算机图形学">
+    <meta name="keywords" content="Unity3D, OpenGL, 计算机图形学, 游戏开发,OpenGL, 计算机图形学">
 
     <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/img/favicon.png">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
+    <link rel="icon shortcut" type="image/ico" href="/img/fav.png">
+    <link rel="icon" sizes="192x192" href="/img/fav.png">
+    <link rel="apple-touch-icon" href="/img/fav.png">
 
     <!--iOS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -53,12 +53,12 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="null">
+    <meta name="apple-mobile-web-app-title" content="有想法更要有行动">
 
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://zwting.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="《OpenGL编程指南》 第二章 着色器与OpenGL | null">
+    <meta property="og:title" content="《OpenGL编程指南》 第二章 着色器与OpenGL | 有想法更要有行动">
     <meta property="og:description" content="记录学习的点点滴滴">
     <meta property="og:article:tag" content="OpenGL, 计算机图形学"> 
 
@@ -145,12 +145,12 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
+      body {
         background-color: #F5F5F5;
       }
 
       /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
         background-color: #fff;
       }
     </style>
@@ -196,6 +196,12 @@
 
 
     <!-- Bing Background -->
+    
+        <script type="text/javascript">
+            queue.offer(function(){
+                $('body').attr('data-original', 'https://api.i-meto.com/bing?null');
+            });
+        </script>
     
 
     <!-- Custom Head -->
@@ -247,7 +253,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-OpenGL的可编程管线"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. OpenGL的可编程管线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#顶点着色阶段"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">顶点着色阶段</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-OpenGL的可编程管线"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. OpenGL的可编程管线</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#顶点着色阶段"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">顶点着色阶段</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#细分着色阶段"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">细分着色阶段</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#几何着色阶段"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">几何着色阶段</span></a></li></ol></li></ol>
 
         <!--
         <li class="mdl-menu__item">
@@ -395,7 +401,9 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h3 id="1-OpenGL的可编程管线"><a href="#1-OpenGL的可编程管线" class="headerlink" title="1. OpenGL的可编程管线"></a>1. OpenGL的可编程管线</h3><ul>
-<li><h4 id="顶点着色阶段"><a href="#顶点着色阶段" class="headerlink" title="顶点着色阶段"></a><strong>顶点着色阶段</strong></h4>将接受你在顶点缓存对象中给出的顶点数据, 独立处理每个顶点– <strong><em>原书</em></strong></li>
+<li><h4 id="顶点着色阶段"><a href="#顶点着色阶段" class="headerlink" title="顶点着色阶段"></a><strong>顶点着色阶段</strong></h4>  将接受你在顶点缓存对象中给出的顶点数据, 独立处理每个顶点– <strong><em>原书</em></strong></li>
+<li><h4 id="细分着色阶段"><a href="#细分着色阶段" class="headerlink" title="细分着色阶段"></a><strong>细分着色阶段</strong></h4>  是一个可选的阶段, 与应用程序中显式地指定几何图元的方法不同, 它会在OpenGL管线内部生成新的几何体. 这个阶段启用之后, 会受到来自顶点着色阶段的输出数据, 并且对收到的顶点进行进一步的处理.</li>
+<li><h4 id="几何着色阶段"><a href="#几何着色阶段" class="headerlink" title="几何着色阶段"></a><strong>几何着色阶段</strong></h4>  也是一个可选阶段</li>
 </ul>
 
     
@@ -521,7 +529,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -669,7 +677,7 @@ It will not impact the appearance and can give developers a lot of support :)
                 var fd = new Date();
                 document.write(fd.getFullYear());
             </script>
-            &nbsp;
+            &nbsp;有想法更要有行动
         </div>
 
         <!-- Paradox Footer Right Section -->
