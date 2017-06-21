@@ -10,7 +10,7 @@
     
     <title>
         
-            归档: 2017/4 | 
+            OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境 | 
         
         有想法更要有行动
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="zwting">
     <meta name="description" content="记录学习的点点滴滴">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,OpenGL, 图形学">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/fav_hd.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://zwting.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2017/4 | 有想法更要有行动">
+    <meta property="og:title" content="OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境 | 有想法更要有行动">
     <meta property="og:description" content="记录学习的点点滴滴">
-    
+    <meta property="og:article:tag" content="OpenGL, 图形学"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -80,7 +80,7 @@
 <!-- Other Styles -->
 <style>
   body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Roboto, "Helvetica Neue", Consolas, Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   }
 
   a {
@@ -227,155 +227,254 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/27/hello-world/">Hello World</a></p>
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
     </div>
+    -->
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/27/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="zwting's avatar">
-            </div>
-            <div>
-                <strong>zwting</strong>
-                <span>4月 27, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-环境搭建"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 环境搭建</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#新建C-项目"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">新建C++项目</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GLEW和GLFW安装步骤"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GLEW和GLFW安装步骤:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-分别解压glfw和glew得到两个文件夹"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1. 分别解压glfw和glew得到两个文件夹</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-复制库文件和头文件"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2. 复制库文件和头文件</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#3-在VS2013中设置依赖库"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">3. 在VS2013中设置依赖库</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#4-设置项目类型-显示控制台或者不显示"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">4. 设置项目类型(显示控制台或者不显示)</span></a></li></ol></li></ol></li></ol>
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
                 
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/19/hello/">《OpenGL编程指南》 第二章 着色器与OpenGL</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/19/hello/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="zwting's avatar">
-            </div>
-            <div>
-                <strong>zwting</strong>
-                <span>4月 19, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/OpenGL/">OpenGL</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>zwting</strong>
+        <span>5月 29, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/OpenGL-图形学/">OpenGL, 图形学</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境&url=https://zwting.github.io//2017/05/29/OpenGL-Learn-1/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境&url=https://zwting.github.io//2017/05/29/OpenGL-Learn-1/index.html&via=zwting" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://zwting.github.io//2017/05/29/OpenGL-Learn-1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://zwting.github.io//2017/05/29/OpenGL-Learn-1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1. 环境搭建"></a>1. 环境搭建</h3><blockquote>
+<p>需要: Win10; VS2013(其他版本的VS未经测试, 但总体流程和操作相差不大); <a href="https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip" target="_blank" rel="external">GLFW3</a>(windows 32位版本); <a href="https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.zipr=http%3A%2F%2Fglew.sourceforge.net%2F&amp;ts=1496045710&amp;use_mirror=nchc" target="_blank" rel="external">GLEW</a></p>
+</blockquote>
+<ul>
+<li><h4 id="新建C-项目"><a href="#新建C-项目" class="headerlink" title="新建C++项目"></a>新建C++项目</h4><ol>
+<li>首先使用VS2013新建一个C++的控制台项目<code>OpenGL_Lean</code>, 然后打开生成解决方案(可自己先新建一个main.cpp, 写上main函数,后面会用到)</li>
+</ol>
+</li>
+<li><h4 id="GLEW和GLFW安装步骤"><a href="#GLEW和GLFW安装步骤" class="headerlink" title="GLEW和GLFW安装步骤:"></a><code>GLEW</code>和<code>GLFW</code>安装步骤:</h4><h5 id="1-分别解压glfw和glew得到两个文件夹"><a href="#1-分别解压glfw和glew得到两个文件夹" class="headerlink" title="1. 分别解压glfw和glew得到两个文件夹"></a>1. 分别解压<code>glfw</code>和<code>glew</code>得到两个文件夹</h5><blockquote>
+<p>glfw解压后文件夹结构如下图 <strong>(图1.1)</strong></p>
+</blockquote>
+<p>  <img src="/img/201705/2017-05-29_164226.png" alt="解压glfw之后的文件夹结构"></p>
+<blockquote>
+<p>glew文件夹结构 <strong>(图1.2)</strong></p>
+</blockquote>
+<p>  <img src="/img/201705/2017-05-29_164227.png" alt="解压glew之后的文件夹结构"></p>
+<h5 id="2-复制库文件和头文件"><a href="#2-复制库文件和头文件" class="headerlink" title="2. 复制库文件和头文件"></a>2. 复制库文件和头文件</h5><p>  首先找到VS2013的安装目录 (如果是默认安装, 那么应该在<code>C:\Program Files (x86)\Microsoft Visual Studio 12.0</code>)</p>
+<ul>
+<li><p><strong>第一步: 复制动态库文件:</strong><br>  分别复制glew (<code>bin\Release\Win32\glew32.dll</code>) 和glfw (<code>lib-vc2013\glfw3.dll</code>) 这两个<code>DLL</code>文件到第一步新建的项目的OpenGL_Learn里面的Debug文件夹下(也可以直接复制到c:\windows\system32下), 复制完成后如下图:<br>  <img src="/img/201705/dll-pic.png" alt="Debug文件夹结构"></p>
+</li>
+<li><p><strong>第二步: 复制静态库文件:</strong><br>  分别复制glew(<code>lib\Release\glew32s.lib</code>) 和glfw (<code>lib-vc2013\glfw3.lib</code>)这两个<code>lib</code>文件到<code>[VS2013安装目录]\vc\lib</code>下面</p>
+</li>
+<li><p><strong>第三步: 复制头文件:</strong><br>  分别复制glew: <code>include\GL</code>和glfw: <code>include\GLFW</code>文件夹到<code>[VS2013安装目录]\vc\include</code>. 复制完成之后VS2013的<code>vc\include</code>文件夹应该是这样的<br>  <img src="/img/201705/2017-05-29_190301.png" alt="include文件夹内的结构">    </p>
+<h5 id="3-在VS2013中设置依赖库"><a href="#3-在VS2013中设置依赖库" class="headerlink" title="3. 在VS2013中设置依赖库"></a>3. 在VS2013中设置依赖库</h5><p>打开VS的解决方案资源管理器, 在刚才的项目上右键, 点击属性打开属性设置对话框, 如下图<br><img src="/img/201705/2017-05-30_001220.png" alt="VS2013属性设置面板"><br><strong>然后按照上图展开<code>链接器</code>&gt;输入, 在项目依赖库里面填入glfw3.lib;glew32s.lib两个静态库, 如上图所示</strong></p>
+<h5 id="4-设置项目类型-显示控制台或者不显示"><a href="#4-设置项目类型-显示控制台或者不显示" class="headerlink" title="4. 设置项目类型(显示控制台或者不显示)"></a>4. 设置项目类型(显示控制台或者不显示)</h5><ul>
+<li>显示控制台窗口: 个人在开发阶段喜欢同时显示控制台窗口, 因为这样可以看到标准输入输出信息, 方便调试和排查错误.<blockquote>
+<p>打开方式: 无需特殊打开, 默认如此</p>
+</blockquote>
+</li>
+<li>不显示控制台窗口: 只显示OpenGL图形窗口<blockquote>
+<p>打开方式: </p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -455,7 +554,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
