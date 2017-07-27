@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-05-29T16:33:30.656Z</updated>
+  <updated>2017-07-06T05:40:22.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -20,31 +20,33 @@
     <link href="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/"/>
     <id>https://zwting.github.io/2017/05/29/OpenGL-Learn-1/</id>
     <published>2017-05-29T08:05:00.000Z</published>
-    <updated>2017-05-29T16:33:30.656Z</updated>
+    <updated>2017-07-06T05:40:22.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1. 环境搭建"></a>1. 环境搭建</h3><blockquote>
 <p>需要: Win10; VS2013(其他版本的VS未经测试, 但总体流程和操作相差不大); <a href="https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip" target="_blank" rel="external">GLFW3</a>(windows 32位版本); <a href="https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.zipr=http%3A%2F%2Fglew.sourceforge.net%2F&amp;ts=1496045710&amp;use_mirror=nchc" target="_blank" rel="external">GLEW</a></p>
 </blockquote>
 <ul>
-<li><h4 id="新建C-项目"><a href="#新建C-项目" class="headerlink" title="新建C++项目"></a>新建C++项目</h4><ol>
+<li><h4 id="新建C-项目"><a href="#新建C-项目" class="headerlink" title="新建C++项目"></a>新建C++项目</h4></li>
+</ul>
+<ol>
 <li>首先使用VS2013新建一个C++的控制台项目<code>OpenGL_Lean</code>, 然后打开生成解决方案(可自己先新建一个main.cpp, 写上main函数,后面会用到)</li>
 </ol>
-</li>
-<li><h4 id="GLEW和GLFW安装步骤"><a href="#GLEW和GLFW安装步骤" class="headerlink" title="GLEW和GLFW安装步骤:"></a><code>GLEW</code>和<code>GLFW</code>安装步骤:</h4><h5 id="1-分别解压glfw和glew得到两个文件夹"><a href="#1-分别解压glfw和glew得到两个文件夹" class="headerlink" title="1. 分别解压glfw和glew得到两个文件夹"></a>1. 分别解压<code>glfw</code>和<code>glew</code>得到两个文件夹</h5><blockquote>
-<p>glfw解压后文件夹结构如下图 <strong>(图1.1)</strong></p>
-</blockquote>
-<p>  <img src="/img/201705/2017-05-29_164226.png" alt="解压glfw之后的文件夹结构"></p>
-<blockquote>
-<p>glew文件夹结构 <strong>(图1.2)</strong></p>
-</blockquote>
-<p>  <img src="/img/201705/2017-05-29_164227.png" alt="解压glew之后的文件夹结构"></p>
-<h5 id="2-复制库文件和头文件"><a href="#2-复制库文件和头文件" class="headerlink" title="2. 复制库文件和头文件"></a>2. 复制库文件和头文件</h5><p>  首先找到VS2013的安装目录 (如果是默认安装, 那么应该在<code>C:\Program Files (x86)\Microsoft Visual Studio 12.0</code>)</p>
 <ul>
-<li><p><strong>第一步: 复制动态库文件:</strong><br>  分别复制glew (<code>bin\Release\Win32\glew32.dll</code>) 和glfw (<code>lib-vc2013\glfw3.dll</code>) 这两个<code>DLL</code>文件到第一步新建的项目的OpenGL_Learn里面的Debug文件夹下(也可以直接复制到c:\windows\system32下), 复制完成后如下图:<br>  <img src="/img/201705/dll-pic.png" alt="Debug文件夹结构"></p>
+<li><h4 id="GLEW和GLFW安装步骤"><a href="#GLEW和GLFW安装步骤" class="headerlink" title="GLEW和GLFW安装步骤:"></a><code>GLEW</code>和<code>GLFW</code>安装步骤:</h4></li>
+</ul>
+<h5 id="1-分别解压glfw和glew得到两个文件夹"><a href="#1-分别解压glfw和glew得到两个文件夹" class="headerlink" title="1. 分别解压glfw和glew得到两个文件夹"></a>1. 分别解压<code>glfw</code>和<code>glew</code>得到两个文件夹</h5><blockquote>
+<p>glfw解压后文件夹结构如下图 <strong>(图1.1)</strong><br><img src="/img/201705/2017-05-29_164226.png" alt="解压glfw之后的文件夹结构"></p>
+<p>glew文件夹结构 <strong>(图1.2)</strong><br><img src="/img/201705/2017-05-29_164227.png" alt="解压glew之后的文件夹结构"></p>
+</blockquote>
+<h5 id="2-复制库文件和头文件"><a href="#2-复制库文件和头文件" class="headerlink" title="2. 复制库文件和头文件"></a>2. 复制库文件和头文件</h5><p>首先找到VS2013的安装目录 (如果是默认安装, 那么应该在<code>C:\Program Files (x86)\Microsoft Visual Studio 12.0</code>)</p>
+<ul>
+<li><p><strong>第一步: 复制动态库文件:</strong><br>分别复制glew (<code>bin\Release\Win32\glew32.dll</code>) 和glfw (<code>lib-vc2013\glfw3.dll</code>) 这两个<code>DLL</code>文件到第一步新建的项目的OpenGL_Learn里面的Debug文件夹下(也可以直接复制到c:\windows\system32下), 复制完成后如下图:<br><img src="/img/201705/dll-pic.png" alt="Debug文件夹结构"></p>
 </li>
-<li><p><strong>第二步: 复制静态库文件:</strong><br>  分别复制glew(<code>lib\Release\glew32s.lib</code>) 和glfw (<code>lib-vc2013\glfw3.lib</code>)这两个<code>lib</code>文件到<code>[VS2013安装目录]\vc\lib</code>下面</p>
+<li><p><strong>第二步: 复制静态库文件:</strong><br>分别复制glew(<code>lib\Release\glew32s.lib</code>) 和glfw (<code>lib-vc2013\glfw3.lib</code>)这两个<code>lib</code>文件到<code>[VS2013安装目录]\vc\lib</code>下面</p>
 </li>
-<li><p><strong>第三步: 复制头文件:</strong><br>  分别复制glew: <code>include\GL</code>和glfw: <code>include\GLFW</code>文件夹到<code>[VS2013安装目录]\vc\include</code>. 复制完成之后VS2013的<code>vc\include</code>文件夹应该是这样的<br>  <img src="/img/201705/2017-05-29_190301.png" alt="include文件夹内的结构">    </p>
+<li><p><strong>第三步: 复制头文件:</strong><br>分别复制glew: <code>include\GL</code>和glfw: <code>include\GLFW</code>文件夹到<code>[VS2013安装目录]\vc\include</code>. 复制完成之后VS2013的<code>vc\include</code>文件夹应该是这样的<br><img src="/img/201705/2017-05-29_190301.png" alt="include文件夹内的结构">    </p>
+</li>
+</ul>
 <h5 id="3-在VS2013中设置依赖库"><a href="#3-在VS2013中设置依赖库" class="headerlink" title="3. 在VS2013中设置依赖库"></a>3. 在VS2013中设置依赖库</h5><p>打开VS的解决方案资源管理器, 在刚才的项目上右键, 点击属性打开属性设置对话框, 如下图<br><img src="/img/201705/2017-05-30_001220.png" alt="VS2013属性设置面板"><br><strong>然后按照上图展开<code>链接器</code>&gt;输入, 在项目依赖库里面填入glfw3.lib;glew32s.lib两个静态库, 如上图所示</strong></p>
 <h5 id="4-设置项目类型-显示控制台或者不显示"><a href="#4-设置项目类型-显示控制台或者不显示" class="headerlink" title="4. 设置项目类型(显示控制台或者不显示)"></a>4. 设置项目类型(显示控制台或者不显示)</h5><ul>
 <li>显示控制台窗口: 个人在开发阶段喜欢同时显示控制台窗口, 因为这样可以看到标准输入输出信息, 方便调试和排查错误.<blockquote>
@@ -52,12 +54,8 @@
 </blockquote>
 </li>
 <li>不显示控制台窗口: 只显示OpenGL图形窗口<blockquote>
-<p>打开方式: </p>
+<p>打开方式: 依次打开<code>属性</code></p>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 ]]></content>
