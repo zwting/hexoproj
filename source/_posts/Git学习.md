@@ -32,12 +32,18 @@ git config --global user.email "your email address"
 这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件
 6.(...未完)
 
-### 3.查看仓库状
+#### 3.查看仓库状
 + 可以查看工作区状态: `git status`
 
 
-
-#### 3. 仓库的创建
+#### 4. 仓库的创建
 + 克隆一个远端仓库到指定的目录中: `git clone ['url']`
 + 克隆一个远端仓库到已存在的目录中: `git clone ['url'] ['path']`
 
+#### 5. 操作
++ 删除在工作区删除了但版本库里面尚未删除的文件: `git rm [文件名]`
++ 只从暂存区删除而不从工作区删除文件:   `git rm --cached [文件名]`
+> 例如: deleteme.rb添加到了暂存区, 现在不想让它被暂存, 就可以使用这条命令: 
+`git rm --cached deleteme.rb`
+
++

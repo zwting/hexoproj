@@ -268,13 +268,21 @@
 <li>前缀”!” 代表一个取反的操作: 会消除前一个模式中指定的忽略的文件. 例如<br><code>\*.swp</code><br><code>!lib.swp</code><br>这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件<br>6.(…未完)</li>
 </ol>
 </blockquote>
-<h3 id="3-查看仓库状"><a href="#3-查看仓库状" class="headerlink" title="3.查看仓库状"></a>3.查看仓库状</h3><ul>
+<h4 id="3-查看仓库状"><a href="#3-查看仓库状" class="headerlink" title="3.查看仓库状"></a>3.查看仓库状</h4><ul>
 <li>可以查看工作区状态: <code>git status</code></li>
 </ul>
-<h4 id="3-仓库的创建"><a href="#3-仓库的创建" class="headerlink" title="3. 仓库的创建"></a>3. 仓库的创建</h4><ul>
+<h4 id="4-仓库的创建"><a href="#4-仓库的创建" class="headerlink" title="4. 仓库的创建"></a>4. 仓库的创建</h4><ul>
 <li>克隆一个远端仓库到指定的目录中: <code>git clone [&#39;url&#39;]</code></li>
 <li>克隆一个远端仓库到已存在的目录中: <code>git clone [&#39;url&#39;] [&#39;path&#39;]</code></li>
 </ul>
+<h4 id="5-操作"><a href="#5-操作" class="headerlink" title="5. 操作"></a>5. 操作</h4><ul>
+<li>删除在工作区删除了但版本库里面尚未删除的文件: <code>git rm [文件名]</code></li>
+<li>只从暂存区删除而不从工作区删除文件:   <code>git rm --cached [文件名]</code><blockquote>
+<p>例如: deleteme.rb添加到了暂存区, 现在不想让它被暂存, 就可以使用这条命令:<br><code>git rm --cached deleteme.rb</code></p>
+</blockquote>
+</li>
+</ul>
+<p>+</p>
 
         
         </div>
@@ -285,7 +293,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/07/28/Git学习/" data-id="cj634f7be0003iabouvjelzea" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://zwting.github.io/2017/07/28/Git学习/" data-id="cj63evzkl0001oybohhumtg4i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -447,7 +455,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/" data-id="cj634f7at0000iabo4gaaigfi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/" data-id="cj63evzkx0003oybo4hdp49lx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
