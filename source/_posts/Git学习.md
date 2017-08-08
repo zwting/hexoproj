@@ -2,7 +2,7 @@
 title: Git学习
 date: 2017-07-28 13:20:24
 tags: 工具;版本管理
-comment: false
+comment: true
 ---
 ### 一. 初始化
 
@@ -30,9 +30,12 @@ git config --global user.email "your email address"
 `\*.swp`
 `!lib.swp`
 这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件
+6.(...未完)
+
+### 3.查看仓库状
++ 可以查看工作区状态: `git status`
 
 
-+ 
 
 #### 3. 仓库的创建
 + 克隆一个远端仓库到指定的目录中: `git clone ['url']`

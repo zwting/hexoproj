@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-08-01T14:07:54.760Z</updated>
+  <updated>2017-08-01T01:56:25.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zwting.github.io/2017/07/28/Git%E5%AD%A6%E4%B9%A0/"/>
     <id>https://zwting.github.io/2017/07/28/Git学习/</id>
     <published>2017-07-28T05:20:24.000Z</published>
-    <updated>2017-08-01T14:07:54.760Z</updated>
+    <updated>2017-08-01T01:56:25.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-初始化"><a href="#一-初始化" class="headerlink" title="一. 初始化"></a>一. 初始化</h3><ul>
 <li>初始化当前目录为一个git仓库:  <code>git init</code></li>
@@ -38,11 +38,13 @@
 <li>空行不会匹配任何模式, 因此可以用来当做分割线使得.gitignore文件看起来更美观</li>
 <li>以#开头的是一个注释</li>
 <li>尾部的空格将会被忽略掉, 除非他们用反斜杠 “\” 括起来</li>
-<li>前缀”!” 代表一个取反的操作: 会消除前一个模式中指定的忽略的文件. 例如<br><code>\*.swp</code><br><code>!lib.swp</code><br>这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件</li>
+<li>前缀”!” 代表一个取反的操作: 会消除前一个模式中指定的忽略的文件. 例如<br><code>\*.swp</code><br><code>!lib.swp</code><br>这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件<br>6.(…未完)</li>
 </ol>
 </blockquote>
-<ul>
-<li><h4 id="3-仓库的创建"><a href="#3-仓库的创建" class="headerlink" title="3. 仓库的创建"></a>3. 仓库的创建</h4></li>
+<h3 id="3-查看仓库状"><a href="#3-查看仓库状" class="headerlink" title="3.查看仓库状"></a>3.查看仓库状</h3><ul>
+<li>可以查看工作区状态: <code>git status</code></li>
+</ul>
+<h4 id="3-仓库的创建"><a href="#3-仓库的创建" class="headerlink" title="3. 仓库的创建"></a>3. 仓库的创建</h4><ul>
 <li>克隆一个远端仓库到指定的目录中: <code>git clone [&#39;url&#39;]</code></li>
 <li>克隆一个远端仓库到已存在的目录中: <code>git clone [&#39;url&#39;] [&#39;path&#39;]</code></li>
 </ul>
@@ -66,7 +68,7 @@
     <link href="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/"/>
     <id>https://zwting.github.io/2017/05/29/OpenGL-Learn-1/</id>
     <published>2017-05-29T08:05:00.000Z</published>
-    <updated>2017-06-05T12:49:06.838Z</updated>
+    <updated>2017-07-06T05:40:22.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1. 环境搭建"></a>1. 环境搭建</h3><blockquote>
 <p>需要: Win10; VS2013(其他版本的VS未经测试, 但总体流程和操作相差不大); <a href="https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip" target="_blank" rel="external">GLFW3</a>(windows 32位版本); <a href="https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.zipr=http%3A%2F%2Fglew.sourceforge.net%2F&amp;ts=1496045710&amp;use_mirror=nchc" target="_blank" rel="external">GLEW</a></p>
