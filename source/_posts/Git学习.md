@@ -46,4 +46,13 @@ git config --global user.email "your email address"
 > 例如: deleteme.rb添加到了暂存区, 现在不想让它被暂存, 就可以使用这条命令: 
 `git rm --cached deleteme.rb`
 
-+
+#### 6. `git stash`命令
++ 解释:
+> 当你想清空当前的工作目录的时候, 可以使用`git stash`命令来记录当前的工作目录和暂存区的状态. 这个命令可以保存你的本地修改并且将你的工作目录恢复到和HEAD commit一致的状态
+> 
+> **简而言之**: 就是可以既更新版本库的最新版本, 又可以保存本地的修改(纯属个人理解)
+
+
++ `git stash list`: 列出已经备份过的改变
++ `git stash show`: 显示已经记录在stash中的文件状态和它的原始状态的不同
++ `git stash save`: 将本地的修改作为一个新的stash, 并且重置工作目录(`git stash`命令也会被解析为`git stash save`)
