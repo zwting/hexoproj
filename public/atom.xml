@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-08-14T05:43:52.000Z</updated>
+  <updated>2017-08-21T03:03:40.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://zwting.github.io/2017/07/28/Git%E5%AD%A6%E4%B9%A0/"/>
     <id>https://zwting.github.io/2017/07/28/Git学习/</id>
     <published>2017-07-28T05:20:24.000Z</published>
-    <updated>2017-08-14T05:43:52.000Z</updated>
+    <updated>2017-08-21T03:03:40.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="一-初始化"><a href="#一-初始化" class="headerlink" title="一. 初始化"></a>一. 初始化</h3><ul>
 <li>初始化当前目录为一个git仓库:  <code>git init</code></li>
@@ -66,6 +66,12 @@
 <li><code>git stash list</code>: 列出已经备份过的改变</li>
 <li><code>git stash show</code>: 显示已经记录在stash中的文件状态和它的原始状态的不同</li>
 <li><code>git stash save</code>: 将本地的修改作为一个新的stash, 并且重置工作目录(<code>git stash</code>命令也会被解析为<code>git stash save</code>)</li>
+</ul>
+<h4 id="7-git-mv命令"><a href="#7-git-mv命令" class="headerlink" title="7. git mv命令"></a>7. <code>git mv</code>命令</h4><ul>
+<li>解释:<blockquote>
+<p>从暂存区中移除已跟踪的文件或重命名已跟踪的文件</p>
+</blockquote>
+</li>
 </ul>
 ]]></content>
     

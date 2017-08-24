@@ -56,3 +56,7 @@ git config --global user.email "your email address"
 + `git stash list`: 列出已经备份过的改变
 + `git stash show`: 显示已经记录在stash中的文件状态和它的原始状态的不同
 + `git stash save`: 将本地的修改作为一个新的stash, 并且重置工作目录(`git stash`命令也会被解析为`git stash save`)
+
+#### 7. `git mv`命令
++ 解释:
+> 从暂存区中移除已跟踪的文件或重命名已跟踪的文件
