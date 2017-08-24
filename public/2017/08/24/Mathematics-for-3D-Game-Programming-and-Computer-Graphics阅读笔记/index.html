@@ -3,17 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>有想法更要有行动</title>
+    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记 | 有想法更要有行动</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="记录学习的点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="有想法更要有行动">
-<meta property="og:url" content="https://zwting.github.io/index.html">
+    <meta name="description" content="写在前面的话: 本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!原书: Mathematics for 3D Game Programming and Computer Graphics, Third Edition   一. 渲染管线1.1 图形处理器通常一个被3D图形渲染的场景有很多独立的对象组成. 这些对象的几何表现就是每一个被表现为">
+<meta name="keywords" content="OpenGL, 图形学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记">
+<meta property="og:url" content="https://zwting.github.io/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记/index.html">
 <meta property="og:site_name" content="有想法更要有行动">
-<meta property="og:description" content="记录学习的点点滴滴">
+<meta property="og:description" content="写在前面的话: 本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!原书: Mathematics for 3D Game Programming and Computer Graphics, Third Edition   一. 渲染管线1.1 图形处理器通常一个被3D图形渲染的场景有很多独立的对象组成. 这些对象的几何表现就是每一个被表现为">
+<meta property="og:image" content="https://zwting.github.io/img/201708/2017-08-24%20.png">
+<meta property="og:image" content="https://zwting.github.io/img/201708/2017-08-24%203.48.18.png">
+<meta property="og:image" content="https://zwting.github.io/img/201708/2017-08-24%205.29.50.png">
+<meta property="og:updated_time" content="2017-08-24T09:54:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有想法更要有行动">
-<meta name="twitter:description" content="记录学习的点点滴滴">
+<meta name="twitter:title" content="Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记">
+<meta name="twitter:description" content="写在前面的话: 本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!原书: Mathematics for 3D Game Programming and Computer Graphics, Third Edition   一. 渲染管线1.1 图形处理器通常一个被3D图形渲染的场景有很多独立的对象组成. 这些对象的几何表现就是每一个被表现为">
+<meta name="twitter:image" content="https://zwting.github.io/img/201708/2017-08-24%20.png">
     
 
     
@@ -210,137 +216,15 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-游戏编程模式-阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
             <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/08/24/游戏编程模式-阅读笔记/">[游戏编程模式]阅读笔记</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/08/24/游戏编程模式-阅读笔记/">
-            <time datetime="2017-08-24T06:10:53.000Z" itemprop="datePublished">2017-08-24</time>
-        </a>
-    </div>
-
-
-                        
-                        
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zwting.github.io/2017/08/24/游戏编程模式-阅读笔记/" data-id="cj6q9v8la0005fkbo2qz12cqx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zwting.github.io/2017/08/24/游戏编程模式-阅读笔记/#comments" class="article-comment-link">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记/">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记</a>
+        <h1 class="article-title" itemprop="name">
+            Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记
         </h1>
     
 
@@ -480,347 +364,37 @@
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-Git学习" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-            <header class="article-header">
-                
+<nav id="article-nav">
     
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/07/28/Git学习/">Git学习</a>
-        </h1>
-    
-
+        <a href="/2017/08/24/游戏编程模式-阅读笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
                 
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/07/28/Git学习/">
-            <time datetime="2017-07-28T05:20:24.000Z" itemprop="datePublished">2017-07-28</time>
+                    [游戏编程模式]阅读笔记
+                
+            </div>
         </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/工具-版本管理/">工具;版本管理</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h3 id="一-初始化"><a href="#一-初始化" class="headerlink" title="一. 初始化"></a>一. 初始化</h3><ul>
-<li>初始化当前目录为一个git仓库:  <code>git init</code></li>
-<li>设置git账户:</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;You Name&quot;</div><div class="line">git config --global user.email &quot;your email address&quot;</div></pre></td></tr></table></figure>
-<h3 id="二-仓库操作"><a href="#二-仓库操作" class="headerlink" title="二. 仓库操作"></a>二. 仓库操作</h3><h4 id="1-版本管理"><a href="#1-版本管理" class="headerlink" title="1. 版本管理"></a>1. 版本管理</h4><ul>
-<li>添加文件到暂存区: <code>git add [Files]</code></li>
-<li>将暂存区的文件提交: <code>git commit -m [&#39;msg&#39;]</code></li>
-</ul>
-<h4 id="2-指定不纳入版本管理的文件"><a href="#2-指定不纳入版本管理的文件" class="headerlink" title="2. 指定不纳入版本管理的文件:"></a>2. 指定不纳入版本管理的文件:</h4><blockquote>
-<p>在git仓库下打开.gitignore文件(Mac/Linux系统下这个文件是个隐藏的, 可以在终端中用命令调用文本编辑器来打开<code>vim .gitignore</code>), 顾名思义, 这个文件名字告诉我们就是用来忽略掉在版本管理中我们不关心的文件, 具体用法如下:</p>
-<ol>
-<li>在git中, 每一行代表一个用来匹配的模式</li>
-<li>空行不会匹配任何模式, 因此可以用来当做分割线使得.gitignore文件看起来更美观</li>
-<li>以#开头的是一个注释</li>
-<li>尾部的空格将会被忽略掉, 除非他们用反斜杠 “\” 括起来</li>
-<li>前缀”!” 代表一个取反的操作: 会消除前一个模式中指定的忽略的文件. 例如<br><code>\*.swp</code><br><code>!lib.swp</code><br>这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件<br>6.(…未完)</li>
-</ol>
-</blockquote>
-<h4 id="3-查看仓库状"><a href="#3-查看仓库状" class="headerlink" title="3.查看仓库状"></a>3.查看仓库状</h4><ul>
-<li>可以查看工作区状态: <code>git status</code></li>
-</ul>
-<h4 id="4-仓库的创建"><a href="#4-仓库的创建" class="headerlink" title="4. 仓库的创建"></a>4. 仓库的创建</h4><ul>
-<li>克隆一个远端仓库到指定的目录中: <code>git clone [&#39;url&#39;]</code></li>
-<li>克隆一个远端仓库到已存在的目录中: <code>git clone [&#39;url&#39;] [&#39;path&#39;]</code></li>
-</ul>
-<h4 id="5-操作"><a href="#5-操作" class="headerlink" title="5. 操作"></a>5. 操作</h4><ul>
-<li>删除在工作区删除了但版本库里面尚未删除的文件: <code>git rm [文件名]</code></li>
-<li>只从暂存区删除而不从工作区删除文件:   <code>git rm --cached [文件名]</code><blockquote>
-<p>例如: deleteme.rb添加到了暂存区, 现在不想让它被暂存, 就可以使用这条命令:<br><code>git rm --cached deleteme.rb</code></p>
-</blockquote>
-</li>
-</ul>
-<h4 id="6-git-stash命令"><a href="#6-git-stash命令" class="headerlink" title="6. git stash命令"></a>6. <code>git stash</code>命令</h4><ul>
-<li>解释:<blockquote>
-<p>当你想清空当前的工作目录的时候, 可以使用<code>git stash</code>命令来记录当前的工作目录和暂存区的状态. 这个命令可以保存你的本地修改并且将你的工作目录恢复到和HEAD commit一致的状态</p>
-<p><strong>简而言之</strong>: 就是可以既更新版本库的最新版本, 又可以保存本地的修改(纯属个人理解)</p>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><code>git stash list</code>: 列出已经备份过的改变</li>
-<li><code>git stash show</code>: 显示已经记录在stash中的文件状态和它的原始状态的不同</li>
-<li><code>git stash save</code>: 将本地的修改作为一个新的stash, 并且重置工作目录(<code>git stash</code>命令也会被解析为<code>git stash save</code>)</li>
-</ul>
-<h4 id="7-git-mv命令"><a href="#7-git-mv命令" class="headerlink" title="7. git mv命令"></a>7. <code>git mv</code>命令</h4><ul>
-<li>解释:<blockquote>
-<p>从暂存区中移除已跟踪的文件或重命名已跟踪的文件</p>
-</blockquote>
-</li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zwting.github.io/2017/07/28/Git学习/" data-id="cj6q9v8ky0003fkbo0jr3cuna" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="https://zwting.github.io/2017/07/28/Git学习/#comments" class="article-comment-link">评论</a>
     
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-OpenGL-Learn-1" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/05/29/OpenGL-Learn-1/">OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/05/29/OpenGL-Learn-1/">
-            <time datetime="2017-05-29T08:05:00.000Z" itemprop="datePublished">2017-05-29</time>
+        <a href="/2017/07/28/Git学习/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">Git学习</div>
         </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/OpenGL-图形学/">OpenGL, 图形学</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1. 环境搭建"></a>1. 环境搭建</h3><blockquote>
-<p>需要: Win10; VS2013(其他版本的VS未经测试, 但总体流程和操作相差不大); <a href="https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip" target="_blank" rel="external">GLFW3</a>(windows 32位版本); <a href="https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.zipr=http%3A%2F%2Fglew.sourceforge.net%2F&amp;ts=1496045710&amp;use_mirror=nchc" target="_blank" rel="external">GLEW</a></p>
-</blockquote>
-<ul>
-<li><h4 id="新建C-项目"><a href="#新建C-项目" class="headerlink" title="新建C++项目"></a>新建C++项目</h4></li>
-</ul>
-<ol>
-<li>首先使用VS2013新建一个C++的控制台项目<code>OpenGL_Lean</code>, 然后打开生成解决方案(可自己先新建一个main.cpp, 写上main函数,后面会用到)</li>
-</ol>
-<ul>
-<li><h4 id="GLEW和GLFW安装步骤"><a href="#GLEW和GLFW安装步骤" class="headerlink" title="GLEW和GLFW安装步骤:"></a><code>GLEW</code>和<code>GLFW</code>安装步骤:</h4></li>
-</ul>
-<h5 id="1-分别解压glfw和glew得到两个文件夹"><a href="#1-分别解压glfw和glew得到两个文件夹" class="headerlink" title="1. 分别解压glfw和glew得到两个文件夹"></a>1. 分别解压<code>glfw</code>和<code>glew</code>得到两个文件夹</h5><blockquote>
-<p>glfw解压后文件夹结构如下图 <strong>(图1.1)</strong><br><img src="/img/201705/2017-05-29_164226.png" alt="解压glfw之后的文件夹结构"></p>
-<p>glew文件夹结构 <strong>(图1.2)</strong><br><img src="/img/201705/2017-05-29_164227.png" alt="解压glew之后的文件夹结构"></p>
-</blockquote>
-<h5 id="2-复制库文件和头文件"><a href="#2-复制库文件和头文件" class="headerlink" title="2. 复制库文件和头文件"></a>2. 复制库文件和头文件</h5><p>首先找到VS2013的安装目录 (如果是默认安装, 那么应该在<code>C:\Program Files (x86)\Microsoft Visual Studio 12.0</code>)</p>
-<ul>
-<li><p><strong>第一步: 复制动态库文件:</strong><br>分别复制glew (<code>bin\Release\Win32\glew32.dll</code>) 和glfw (<code>lib-vc2013\glfw3.dll</code>) 这两个<code>DLL</code>文件到第一步新建的项目的OpenGL_Learn里面的Debug文件夹下(也可以直接复制到c:\windows\system32下), 复制完成后如下图:<br><img src="/img/201705/dll-pic.png" alt="Debug文件夹结构"></p>
-</li>
-<li><p><strong>第二步: 复制静态库文件:</strong><br>分别复制glew(<code>lib\Release\glew32s.lib</code>) 和glfw (<code>lib-vc2013\glfw3.lib</code>)这两个<code>lib</code>文件到<code>[VS2013安装目录]\vc\lib</code>下面</p>
-</li>
-<li><p><strong>第三步: 复制头文件:</strong><br>分别复制glew: <code>include\GL</code>和glfw: <code>include\GLFW</code>文件夹到<code>[VS2013安装目录]\vc\include</code>. 复制完成之后VS2013的<code>vc\include</code>文件夹应该是这样的<br><img src="/img/201705/2017-05-29_190301.png" alt="include文件夹内的结构">    </p>
-</li>
-</ul>
-<h5 id="3-在VS2013中设置依赖库"><a href="#3-在VS2013中设置依赖库" class="headerlink" title="3. 在VS2013中设置依赖库"></a>3. 在VS2013中设置依赖库</h5><p>打开VS的解决方案资源管理器, 在刚才的项目上右键, 点击属性打开属性设置对话框, 如下图<br><img src="/img/201705/2017-05-30_001220.png" alt="VS2013属性设置面板"><br><strong>然后按照上图展开<code>链接器</code>&gt;输入, 在项目依赖库里面填入glfw3.lib;glew32s.lib两个静态库, 如上图所示</strong></p>
-<h5 id="4-设置项目类型-显示控制台或者不显示"><a href="#4-设置项目类型-显示控制台或者不显示" class="headerlink" title="4. 设置项目类型(显示控制台或者不显示)"></a>4. 设置项目类型(显示控制台或者不显示)</h5><ul>
-<li>显示控制台窗口: 个人在开发阶段喜欢同时显示控制台窗口, 因为这样可以看到标准输入输出信息, 方便调试和排查错误.<blockquote>
-<p>打开方式: 无需特殊打开, 默认如此</p>
-</blockquote>
-</li>
-<li>不显示控制台窗口: 只显示OpenGL图形窗口<blockquote>
-<p>打开方式: 依次打开<code>属性</code></p>
-</blockquote>
-</li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/" data-id="cj6q9v8l20004fkbo7gfna0x6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/#comments" class="article-comment-link">评论</a>
-    
+</nav>
 
-        </footer>
-    </div>
+
     
 </article>
 
+
+    
+    
+        <section id="comments">
+    <div id="uyan_frame"></div>
+</section>
+    
 
 </section>
             

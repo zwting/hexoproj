@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zwting.github.io/"/>
-  <updated>2017-08-21T03:03:40.000Z</updated>
+  <updated>2017-08-24T06:10:53.000Z</updated>
   <id>https://zwting.github.io/</id>
   
   <author>
@@ -14,6 +14,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[游戏编程模式]阅读笔记</title>
+    <link href="https://zwting.github.io/2017/08/24/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>https://zwting.github.io/2017/08/24/游戏编程模式-阅读笔记/</id>
+    <published>2017-08-24T06:10:53.000Z</published>
+    <updated>2017-08-24T06:10:53.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记</title>
+    <link href="https://zwting.github.io/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>https://zwting.github.io/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记/</id>
+    <published>2017-08-24T06:08:28.000Z</published>
+    <updated>2017-08-24T09:54:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
+<p>本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
+</blockquote>
+<h3 id="一-渲染管线"><a href="#一-渲染管线" class="headerlink" title="一. 渲染管线"></a>一. 渲染管线</h3><h4 id="1-1-图形处理器"><a href="#1-1-图形处理器" class="headerlink" title="1.1 图形处理器"></a>1.1 图形处理器</h4><p>通常一个被3D图形渲染的场景有很多独立的对象组成. 这些对象的几何表现就是每一个被表现为一些顶点的和一个特定类型的图元(表明了顶点是怎么的形式组成一个形状). 图1.1列出了 OpenGL图形库定义了10种图元. 图形硬件可以渲染一系列独立的点, 一些线段, 或者一组被填充的多边形. 大多数时间, 3D模型的表面是由一些三角形构成的, 每一个三角形引用了定点列表中的三个点.</p>
+<blockquote>
+<p><img src="/img/201708/2017-08-24 .png" alt="图1.1, 来自原书截图"></p>
+</blockquote>
+<p>现代的3D图形卡通常会执行从CPU发出的一些指令, CPU想GPU发出渲染命令, 然后CPU会执行其他的任务, 而GPU会执行这些渲染操作. 这通常被称为<strong><em>异步操作</em></strong>. 当需要被渲染的图形信息被提交到渲染库(OpenGL等)的时候, 请求渲染操作的函数将会在渲染操作还未完成前很早就返回. 这些在一个渲染命令的子操作和渲染完成之间的滞后时间将不会产生什么问题, 但是在渲染完成的时刻是需要知道的. 幸运的是, 目前OpenGL的一些扩展可程序以在CPU中运行, 这些程序能够在GPU完成渲染的时候发出通知.但同时会带来性能损耗, 这种异步操作会拖慢3D图形程序的执行速度, 因此, 如果想要性能优先, 那么应该避免这些操作.</p>
+<p>那么应用程序和GPU的通信是怎么来进行呢? 通常是通过一些第三方的图形库来实现的, 比如OpenGL. 这些应用将会通过调用OpenGL API方式来向其发出渲染命令. 而OpenGL等图形库又向GPU驱动程序发送渲染命令, 这些驱动程序才知道怎样和GPU交流. OpenGL的这些接口我们称之为<strong><em>Hardware Abstraction Layer(HAL) 硬件抽象层</em></strong>, 因为它提供了一些通用的函数可以用来渲染场景, 这些函数可以在任何支持OpenGL架构的图形硬件上运行. 驱动程序将会把这些OpenGL的API转换成GPU可以执行的命令. 3D图形驱动程序通常会直接实现OpenGL函数以最小化渲染命令的开销. <strong><em>图1.2</em></strong> 展示了CPU和GPU之间的通信过程:</p>
+<blockquote>
+<p><img src="/img/201708/2017-08-24 3.48.18.png" alt="图1.2 CPU和GPU之间的通信(来自原书截图)"></p>
+</blockquote>
+<p>一个3D图形卡有自己的存储空间(显存), 通常被称为<strong><em>VRAM (Video Random Access Memory)</em></strong>. GPU可以在VRAM中存储任何东西, 当时在3D应用程序运行的时候, 有这么几类数据大多数总可以在显存中找到. VRAM中有两个图像缓冲区, 被称为前缓冲和后缓冲 (传说中的<a href="https://baike.baidu.com/item/%E5%8F%8C%E7%BC%93%E5%86%B2/10953356?fr=aladdin" target="_blank" rel="external"><strong><em>双缓冲</em></strong></a>). 其中, <code>front image buffers</code> 包含了当前在可视区域内看到的每一个像素的数据. <em>可视区域</em> 指的就是包含了已经被渲染的图象数据的一个区域, 他可能是一个窗口, 也可能是整个屏幕; <code>back image buffer</code>是GPU真正渲染的场景的位置. <code>back buffer</code> 在渲染完成呈现给用户之前是不可见的. 一旦一个图像完成了渲染, <code>back buffer</code> 和 <code>front buffer</code> 将会交换数据. 这个操作被称为<code>缓冲交换</code>. 他可以通过以下几种方式来实现:</p>
+<blockquote>
+<ol>
+<li>直接交换两个缓冲区的内存地址</li>
+<li>将<code>back buffer</code>中的数据拷贝到<code>fornt buffer</code>中</li>
+</ol>
+</blockquote>
+<p>缓冲区交换通常和图像显示刷新率保持同步, 这是为了避免发生<code>画面撕裂现象</code>. <code>画面撕裂</code>通常由于在刷新期间发生了缓冲区交换, 这将会导致一副图像的上半部分和下半部分不同, 因为他们的数据分别来自<code>front buffer</code>和<code>back buffer</code>.</p>
+<p>还有一块存储在VRAM中的数据块被称为<code>Depth-buffer</code>或者<code>z-buffer</code>. <code>深度缓冲</code>存储的数据是图像缓冲中的每一个像素数据的<code>depth</code>,<code>depth</code>表明这个像素距离屏幕有多远或者这个像素位于图像中的哪个深度. <code>深度缓冲</code>通常用来隐藏或表面消除的功能, 它只绘制深度小于图像缓冲去深度的像素. <code>Depth</code>同时也表明了从被绘制的场景到虚拟相机(充当人眼的那个位置)的距离. 而<code>z-buffer</code>这个名字来自于相机的Z轴, 它是从相机的坐标空间射向屏幕的方向.<br>随着<code>image buffer</code>和<code>depth buffer</code>的创建, 应用程序可能会请求<code>stencil buffer(模板缓冲区)</code>. <code>stencil buffer</code>包含了一个整型的遮罩, 这和<code>image buffer</code>中的每一个像素都是一一对应的, 他可以用来控制特定的像素是否被绘制. 更高级的<code>stencil buffer</code>可以用来产生实时阴影.<br>大多数3D渲染应用程序中使用VRAM主要通过<code>Texture maps(纹理贴图)</code>, <code>texture maps</code>通常被用来附着到物体的表面以达到更好的视觉细节. 在高级渲染程序中, <code>texture maps</code>通常包含了比简单像素图像更多的信息. 例如: 一个<a href="https://en.wikipedia.org/wiki/Bump_mapping" target="_blank" rel="external"><code>bump map(凹凸贴图)</code></a>包含的信息是一个个的向量, 这些向量表明了物体表面对应位置的倾斜程度. </p>
+<h4 id="1-2-向量变换"><a href="#1-2-向量变换" class="headerlink" title="1.2 向量变换"></a>1.2 向量变换</h4><p>几何数据以3维空间的形式传给了图形硬件. 接下来图形硬件需要做的就是就是将这些数据转换到2维空间的视口内. 在<code>rendering pipeline(渲染管线)</code> 过程中有很多与之相关联的坐标系统, 他们之间的转换过程如<code>图1.3</code>. 一个3D 模型的顶点通常存储在对象的<code>object space(模型坐标空间)</code>内, 这个坐标系统取决于特定的模型.每一个模型的位置通常被存储在<code>word space(世界坐标空间)</code>中, 这个坐标空间将所有的对象连接到一个全局的坐标空间中. 在每一个对象被渲染之前, 它的顶点必须被转换到<code>camera space(相机空间)</code>中, 这个坐标空间的x和y轴适合显示区域的x和y平行的. 模型的顶点是可以直接从<code>模型空间</code>转换到<code>相机空间</code>的,具体做法就是通过矩阵乘法将 <code>模型坐标</code>-&gt;<code>世界坐标</code>的变换矩阵M<sub>obj-word</sub> 和 <code>世界坐标</code>-&gt;<code>相机坐标</code>的变换矩阵M<sub>word-camera</sub> 连接起来,得到M<sub>obj-camera</sub>称之为 <code>model-view</code>变换.<br>一旦模型的顶点被转换到了<code>相机空间</code>,他们会经历一个投影变换, 这个变换将会达到人眼视觉系统近大远小的视觉效果. 这个投影是通过四维空间其次坐标来完成的, 在这些顶点完成投影后的坐标空间被称为<code>homogeneous clip space(齐次裁剪空间)</code>, 之所以这么叫它, 是因为在这个坐标空间,图元会被裁剪在可视区域内,确保落在可视区域外面的图元不会被渲染.</p>
+<blockquote>
+<p><img src="/img/201708/2017-08-24 5.29.50.png" alt="图1.3(来自原书截图)"></p>
+</blockquote>
+<p>在齐次坐标空间中, </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; title=&quot;写在前面的话:&quot;&gt;&lt;/a&gt;写在前面的话:&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 
+    
+    </summary>
+    
+    
+      <category term="OpenGL, 图形学" scheme="https://zwting.github.io/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>Git学习</title>
