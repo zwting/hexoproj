@@ -17,8 +17,8 @@
   
   <entry>
     <title>[游戏编程模式]阅读笔记</title>
-    <link href="https://zwting.github.io/2017/08/24/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    <id>https://zwting.github.io/2017/08/24/游戏编程模式-阅读笔记/</id>
+    <link href="https://zwting.github.io/2017/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"/>
+    <id>https://zwting.github.io/2017/游戏编程模式-阅读笔记.html</id>
     <published>2017-08-24T06:10:53.000Z</published>
     <updated>2017-08-24T06:10:53.000Z</updated>
     
@@ -31,15 +31,15 @@
   
   <entry>
     <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记</title>
-    <link href="https://zwting.github.io/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
-    <id>https://zwting.github.io/2017/08/24/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记/</id>
+    <link href="https://zwting.github.io/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"/>
+    <id>https://zwting.github.io/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记.html</id>
     <published>2017-08-24T06:08:28.000Z</published>
-    <updated>2017-08-24T09:54:18.000Z</updated>
+    <updated>2017-08-25T03:37:12.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
-<p>本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
+<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
 </blockquote>
-<h3 id="一-渲染管线"><a href="#一-渲染管线" class="headerlink" title="一. 渲染管线"></a>一. 渲染管线</h3><h4 id="1-1-图形处理器"><a href="#1-1-图形处理器" class="headerlink" title="1.1 图形处理器"></a>1.1 图形处理器</h4><p>通常一个被3D图形渲染的场景有很多独立的对象组成. 这些对象的几何表现就是每一个被表现为一些顶点的和一个特定类型的图元(表明了顶点是怎么的形式组成一个形状). 图1.1列出了 OpenGL图形库定义了10种图元. 图形硬件可以渲染一系列独立的点, 一些线段, 或者一组被填充的多边形. 大多数时间, 3D模型的表面是由一些三角形构成的, 每一个三角形引用了定点列表中的三个点.</p>
+<h3 id="一-渲染管线"><a href="#一-渲染管线" class="headerlink" title="一. 渲染管线"></a>一. 渲染管线</h3><h4 id="1-1-图形处理器"><a href="#1-1-图形处理器" class="headerlink" title="1.1 图形处理器"></a>1.1 图形处理器</h4><p>一个3D图形场景通常包含了很多独立的对象.这些对象的几何形式通常是由一些特定类型的<code>图元</code>组成的.<code>图元</code>指的是顶点以怎样的方式连接构成了这种形状. 图1.1列出了 OpenGL图形库定义了10种图元. 图形硬件可以渲染一系列独立的点, 一些线段, 或者一组已经填充好了的多边形. 在大多数情况下, 3D模型的表面是由一些三角形构成的, 每一个三角形又是由顶点列表中的3个顶点组成.</p>
 <blockquote>
 <p><img src="/img/201708/2017-08-24 .png" alt="图1.1, 来自原书截图"></p>
 </blockquote>
@@ -61,13 +61,17 @@
 <blockquote>
 <p><img src="/img/201708/2017-08-24 5.29.50.png" alt="图1.3(来自原书截图)"></p>
 </blockquote>
-<p>在齐次坐标空间中, </p>
+<p>在齐次坐标空间中, 每个顶点的坐标称为<code>normalized device coordinates(规格化设备坐标, 简称NDC)</code>, 这里出现了一个新的术语<code>normalized(规格化或标准化)</code>, 它的意思其实就是将每个顶点的x,y,z分量映射到[-1,1]区间内, 它表示顶点最终出现在<code>视口</code>中的位置. 顶点还要经历再一次的变换<code>viewport transformation(视口变换)</code>, 这个变换的结果其实就是最终顶点呈现在屏幕上的位置, <code>z分量</code>通常会被映射到[-1,1]区间内, 但是随后它会被缩放到深度缓冲所使用的每一个像素位对应的整型范围.最后, 顶点呈现在了我们的屏幕上.<br>除了从<code>模型空间</code>转换到<code>屏幕空间</code>外, 图形处理器还会针对每一个顶点做一些运算.例如: OpenGL的光照模型将会计算到达每一个顶点的光照强度的该顶点反射颜色以及最终会有多少颜色会被反射进入人眼(相机的位置). 这中运算被称为<code>per-vertex lighting(逐顶点光照)</code>. 一些高级的3D程序会使用逐顶点光照处理, 这将会在物体表面产生很细腻的光照表现(像素级别的).<br>每一个顶点还会携带一个甚至更多的<code>texture coordinates(纹理坐标)</code>. 通常情况下, <code>纹理坐标</code>是由应用程序明确指定的或者是GPU自动生成的. 图元在渲染的时候, 将会根据<code>纹理坐标</code>从对应的纹理中查询到对应的颜色值插入到图元对应的位置. 这些颜色和其他在每个像素被插入的颜色将会决定最终在视口中的显示效果.</p>
+<h4 id="1-3-光栅化和片元操作"><a href="#1-3-光栅化和片元操作" class="headerlink" title="1.3 光栅化和片元操作"></a>1.3 光栅化和片元操作</h4><p>一旦模型的顶点完成了坐标转换最终呈现在了屏幕中, GPU必须决定这些在视口中的像素应该用什么样的图元来呈现. 水平扫描固定间隔的像素填充图元的处理过程叫做<code>raserization(光栅化)</code>. GPU计算每一个像素的深度, 插入顶点颜色和纹理坐标. 这些信息和像素本身的位置结合起来叫做<code>fragment(片元)</code>.<br>图元到片元的转换如<code>图1.4</code>. 应用程序必须在这个过程的第一阶段决定是否进行<code>face culling(表面剔除)</code>.<code>表面剔除</code>只会对多边形图元生效, 它会移除背对着相机或者面对着相机的多边形图元. 但是大多数情况下,<code>表面剔除</code>被用来优化性能, 因为它会去除背对着相机的多边形, 这些不需要被渲染, 因为我们看不到它.</p>
+<blockquote>
+<p><img src="/img/201708/2017-08-25 11.28.13.png" alt="图1.4(来自原书截图)"></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
       &lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; title=&quot;写在前面的话:&quot;&gt;&lt;/a&gt;写在前面的话:&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;本文基本等同与翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 
+&lt;p&gt;本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 
     
     </summary>
     
@@ -78,8 +82,8 @@
   
   <entry>
     <title>Git学习</title>
-    <link href="https://zwting.github.io/2017/07/28/Git%E5%AD%A6%E4%B9%A0/"/>
-    <id>https://zwting.github.io/2017/07/28/Git学习/</id>
+    <link href="https://zwting.github.io/2017/Git%E5%AD%A6%E4%B9%A0.html"/>
+    <id>https://zwting.github.io/2017/Git学习.html</id>
     <published>2017-07-28T05:20:24.000Z</published>
     <updated>2017-08-21T03:03:40.000Z</updated>
     
@@ -151,8 +155,8 @@
   
   <entry>
     <title>OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</title>
-    <link href="https://zwting.github.io/2017/05/29/OpenGL-Learn-1/"/>
-    <id>https://zwting.github.io/2017/05/29/OpenGL-Learn-1/</id>
+    <link href="https://zwting.github.io/2017/OpenGL-Learn-1.html"/>
+    <id>https://zwting.github.io/2017/OpenGL-Learn-1.html</id>
     <published>2017-05-29T08:05:00.000Z</published>
     <updated>2017-07-06T05:40:22.000Z</updated>
     

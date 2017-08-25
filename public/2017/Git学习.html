@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Git学习 | 有想法更要有行动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="一. 初始化 初始化当前目录为一个git仓库:  git init 设置git账户:  12git config --global user.name &amp;quot;You Name&amp;quot;git config --global user.email &amp;quot;your email address&amp;quot; 二. 仓库操作1. 版本管理 添加文件到暂存区: git add [Files] 将">
+<meta name="keywords" content="工具;版本管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git学习">
+<meta property="og:url" content="https://zwting.github.io/2017/Git学习.html">
+<meta property="og:site_name" content="有想法更要有行动">
+<meta property="og:description" content="一. 初始化 初始化当前目录为一个git仓库:  git init 设置git账户:  12git config --global user.name &amp;quot;You Name&amp;quot;git config --global user.email &amp;quot;your email address&amp;quot; 二. 仓库操作1. 版本管理 添加文件到暂存区: git add [Files] 将">
+<meta property="og:updated_time" content="2017-08-21T03:03:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git学习">
+<meta name="twitter:description" content="一. 初始化 初始化当前目录为一个git仓库:  git init 设置git账户:  12git config --global user.name &amp;quot;You Name&amp;quot;git config --global user.email &amp;quot;your email address&amp;quot; 二. 仓库操作1. 版本管理 添加文件到暂存区: git add [Files] 将">
+    
+
+    
+        <link rel="alternate" href="/" title="有想法更要有行动" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">有想法更要有行动</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="/categories">Categories</a>
+                
+                    <a class="main-nav-link" href="/tags">Tags</a>
+                
+                    <a class="main-nav-link" href="/about">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/logo.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">Categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">Tags</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/logo.png" />
+            <h2 id="name">zwting</h2>
+            <h3 id="title">Game Developer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>ChangSha, China</span>
+            <a id="follow" target="_blank" href="https://github.com/zwting/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                4
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                2
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="twitter" class=tooltip>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="facebook" class=tooltip>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="dribbble" class=tooltip>
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="/" target="_blank" title="rss" class=tooltip>
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-Git学习" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Git学习
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/Git学习.html">
+            <time datetime="2017-07-28T05:20:24.000Z" itemprop="datePublished">2017-07-28</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/工具-版本管理/">工具;版本管理</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h3 id="一-初始化"><a href="#一-初始化" class="headerlink" title="一. 初始化"></a>一. 初始化</h3><ul>
+<li>初始化当前目录为一个git仓库:  <code>git init</code></li>
+<li>设置git账户:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;You Name&quot;</div><div class="line">git config --global user.email &quot;your email address&quot;</div></pre></td></tr></table></figure>
+<h3 id="二-仓库操作"><a href="#二-仓库操作" class="headerlink" title="二. 仓库操作"></a>二. 仓库操作</h3><h4 id="1-版本管理"><a href="#1-版本管理" class="headerlink" title="1. 版本管理"></a>1. 版本管理</h4><ul>
+<li>添加文件到暂存区: <code>git add [Files]</code></li>
+<li>将暂存区的文件提交: <code>git commit -m [&#39;msg&#39;]</code></li>
+</ul>
+<h4 id="2-指定不纳入版本管理的文件"><a href="#2-指定不纳入版本管理的文件" class="headerlink" title="2. 指定不纳入版本管理的文件:"></a>2. 指定不纳入版本管理的文件:</h4><blockquote>
+<p>在git仓库下打开.gitignore文件(Mac/Linux系统下这个文件是个隐藏的, 可以在终端中用命令调用文本编辑器来打开<code>vim .gitignore</code>), 顾名思义, 这个文件名字告诉我们就是用来忽略掉在版本管理中我们不关心的文件, 具体用法如下:</p>
+<ol>
+<li>在git中, 每一行代表一个用来匹配的模式</li>
+<li>空行不会匹配任何模式, 因此可以用来当做分割线使得.gitignore文件看起来更美观</li>
+<li>以#开头的是一个注释</li>
+<li>尾部的空格将会被忽略掉, 除非他们用反斜杠 “\” 括起来</li>
+<li>前缀”!” 代表一个取反的操作: 会消除前一个模式中指定的忽略的文件. 例如<br><code>\*.swp</code><br><code>!lib.swp</code><br>这个模式代表将会忽略掉不是以lib.swp结尾的所有.swp文件<br>6.(…未完)</li>
+</ol>
+</blockquote>
+<h4 id="3-查看仓库状"><a href="#3-查看仓库状" class="headerlink" title="3.查看仓库状"></a>3.查看仓库状</h4><ul>
+<li>可以查看工作区状态: <code>git status</code></li>
+</ul>
+<h4 id="4-仓库的创建"><a href="#4-仓库的创建" class="headerlink" title="4. 仓库的创建"></a>4. 仓库的创建</h4><ul>
+<li>克隆一个远端仓库到指定的目录中: <code>git clone [&#39;url&#39;]</code></li>
+<li>克隆一个远端仓库到已存在的目录中: <code>git clone [&#39;url&#39;] [&#39;path&#39;]</code></li>
+</ul>
+<h4 id="5-操作"><a href="#5-操作" class="headerlink" title="5. 操作"></a>5. 操作</h4><ul>
+<li>删除在工作区删除了但版本库里面尚未删除的文件: <code>git rm [文件名]</code></li>
+<li>只从暂存区删除而不从工作区删除文件:   <code>git rm --cached [文件名]</code><blockquote>
+<p>例如: deleteme.rb添加到了暂存区, 现在不想让它被暂存, 就可以使用这条命令:<br><code>git rm --cached deleteme.rb</code></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="6-git-stash命令"><a href="#6-git-stash命令" class="headerlink" title="6. git stash命令"></a>6. <code>git stash</code>命令</h4><ul>
+<li>解释:<blockquote>
+<p>当你想清空当前的工作目录的时候, 可以使用<code>git stash</code>命令来记录当前的工作目录和暂存区的状态. 这个命令可以保存你的本地修改并且将你的工作目录恢复到和HEAD commit一致的状态</p>
+<p><strong>简而言之</strong>: 就是可以既更新版本库的最新版本, 又可以保存本地的修改(纯属个人理解)</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><code>git stash list</code>: 列出已经备份过的改变</li>
+<li><code>git stash show</code>: 显示已经记录在stash中的文件状态和它的原始状态的不同</li>
+<li><code>git stash save</code>: 将本地的修改作为一个新的stash, 并且重置工作目录(<code>git stash</code>命令也会被解析为<code>git stash save</code>)</li>
+</ul>
+<h4 id="7-git-mv命令"><a href="#7-git-mv命令" class="headerlink" title="7. git mv命令"></a>7. <code>git mv</code>命令</h4><ul>
+<li>解释:<blockquote>
+<p>从暂存区中移除已跟踪的文件或重命名已跟踪的文件</p>
+</blockquote>
+</li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://zwting.github.io/2017/Git学习.html" data-id="cj6rcwg590001rjboar2p5o3f" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zwting.github.io/2017/Git学习.html#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记.html" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/OpenGL-Learn-1.html" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="uyan_frame"></div>
+</section>
+    
+
+</section>
+            
+                
+<aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/游戏编程模式-阅读笔记.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/游戏编程模式-阅读笔记.html" class="title">[游戏编程模式]阅读笔记</a></p>
+                            <p class="item-date"><time datetime="2017-08-24T06:10:53.000Z" itemprop="datePublished">2017-08-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记</a></p>
+                            <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/Git学习.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/Git学习.html" class="title">Git学习</a></p>
+                            <p class="item-date"><time datetime="2017-07-28T05:20:24.000Z" itemprop="datePublished">2017-07-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/OpenGL-Learn-1.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/OpenGL-Learn-1.html" class="title">OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</a></p>
+                            <p class="item-date"><time datetime="2017-05-29T08:05:00.000Z" itemprop="datePublished">2017-05-29</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenGL-图形学/">OpenGL, 图形学</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具-版本管理/">工具;版本管理</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/OpenGL-图形学/" style="font-size: 20px;">OpenGL, 图形学</a> <a href="/tags/工具-版本管理/" style="font-size: 10px;">工具;版本管理</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 zwting<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=214053"></script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
