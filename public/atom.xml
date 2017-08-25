@@ -30,13 +30,57 @@
   </entry>
   
   <entry>
-    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记</title>
-    <link href="https://zwting.github.io/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"/>
-    <id>https://zwting.github.io/2017/Mathematics-for-3D-Game-Programming-and-Computer-Graphics阅读笔记.html</id>
+    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</title>
+    <link href="https://zwting.github.io/2017/mf3gpacg-2.html"/>
+    <id>https://zwting.github.io/2017/mf3gpacg-2.html</id>
     <published>2017-08-24T06:08:28.000Z</published>
-    <updated>2017-08-25T05:57:22.000Z</updated>
+    <updated>2017-08-25T08:23:55.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
+    <content type="html"><![CDATA[<h2 id="第二章-向量"><a href="#第二章-向量" class="headerlink" title="第二章: 向量"></a>第二章: 向量</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
+<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
+</blockquote>
+<h4 id="2-1-向量的属性"><a href="#2-1-向量的属性" class="headerlink" title="2.1 向量的属性"></a>2.1 向量的属性</h4><ul>
+<li><code>定义</code>: 这里将向量定义为: <code>实数组成的n元组</code></li>
+</ul>
+<p>不过大多数情况下, 这个n指的是2, 3, 4, 一个n维向量可以记为:<br>$$V=(v_1,v_2,…,v_n) \tag{2.1}$$<br>$V_i$表示向量$V$的第i个分量, 通常情况下, 下标是这个分量所对应的坐标轴的名字. 例如: 一个三维向量$P$可以记为: $P_x,P_y,P_z$.</p>
+<ul>
+<li><p><code>列向量</code>: 可以使用1列n行来表示和(2.1)式等价的<code>列向量</code><br>$$V =<br>\begin{bmatrix}<br>v_1\\ v_2\\ \dots \\ v_n<br>\end{bmatrix} \tag{2.2}$$</p>
+</li>
+<li><p><code>行向量</code>: 可以用1行n列来表示和(2.1)等价的<code>行向量</code>, 同时他也是列向量(2.2)的<code>转置矩阵</code>(行变列)<br>$$V^T=<br>\begin{bmatrix}<br>v_1 &amp; v_2 &amp; \dots &amp; v_n<br>\end{bmatrix}\tag{2.3}$$</p>
+</li>
+<li><p><code>向量和标量相乘</code>: 分别用这个标量和向量的每一个分量相乘, 结果是一个向量<br>$$<br>aV=Va=(av_1,av_2,\dots,av_n) \tag{2.4}<br>$$</p>
+</li>
+<li><p><code>向量和向量的加法</code>: 每个分量分别相加, 结果是一个向量. 比如$P + Q$:<br>$$<br>P + Q = (p_1 + q_1,p_2 + q_2,\dots,p_n + q_n)<br>\tag{2.5}$$</p>
+</li>
+<li><p><code>向量和向量的减法</code>: $P - Q$可以认为是$P + (-Q)$</p>
+</li>
+<li><h4 id="向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立"><a href="#向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立" class="headerlink" title="向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立"></a>向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立</h4><blockquote>
+<p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
+</blockquote>
+</li>
+</ul>
+<p>n维向量$V$的模是一个标量, 记做$\left \| V \right \|$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第二章-向量&quot;&gt;&lt;a href=&quot;#第二章-向量&quot; class=&quot;headerlink&quot; title=&quot;第二章: 向量&quot;&gt;&lt;/a&gt;第二章: 向量&lt;/h2&gt;&lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; ti
+    
+    </summary>
+    
+    
+      <category term="OpenGL, 图形学" scheme="https://zwting.github.io/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</title>
+    <link href="https://zwting.github.io/2017/mf3gpacg_1.html"/>
+    <id>https://zwting.github.io/2017/mf3gpacg_1.html</id>
+    <published>2017-08-24T06:08:28.000Z</published>
+    <updated>2017-08-25T06:29:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一章-渲染管线"><a href="#第一章-渲染管线" class="headerlink" title="第一章: 渲染管线"></a>第一章: 渲染管线</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
 <p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
 </blockquote>
 <h3 id="一-渲染管线"><a href="#一-渲染管线" class="headerlink" title="一. 渲染管线"></a>一. 渲染管线</h3><h4 id="1-1-图形处理器"><a href="#1-1-图形处理器" class="headerlink" title="1.1 图形处理器"></a>1.1 图形处理器</h4><p>一个3D图形场景通常包含了很多独立的对象.这些对象的几何形式通常是由一些特定类型的<code>图元</code>组成的.<code>图元</code>指的是顶点以怎样的方式连接构成了这种形状. 图1.1列出了 OpenGL图形库定义了10种图元. 图形硬件可以渲染一系列独立的点, 一些线段, 或者一组已经填充好了的多边形. 在大多数情况下, 3D模型的表面是由一些三角形构成的, 每一个三角形又是由顶点列表中的3个顶点组成.</p>
@@ -66,12 +110,15 @@
 <blockquote>
 <p><img src="/img/201708/2017-08-25 11.28.13.png" alt="图1.4(来自原书截图)"></p>
 </blockquote>
+<p>图形应用程序指定片元数据在光栅化过程中怎样来确实每一个像素的最终颜色和深度. 这个过程叫做<code>fragment shading 或者 pixel shading(片元着色)</code>. 最终的颜可可能是从纹理获取来的颜色和顶点插入的颜色的成绩, 也可能是复杂的逐顶点光照的结果. 最终的深度通常不会变化, 但是一些高级的3D图形硬件允许我们来按照自己的意愿替换最终计算的深度值. <code>图1.5</code>展示了在光栅化过程中每一个片元产生所执行的操作. 大部分操作都会决定一个图元最终绘制到屏幕上或者被丢弃. 从逻辑上来讲,虽然这些操作会在<code>片元着色</code>之后再进行, 但大多数GPU会在执行<code>片元着色</code>前进行一些测试, 这些测试能够带来一些性能和时间上的优势: 有一些最终根本不会被显示到屏幕上的图元将不会通过测试, 这就节省了不必要的性能开销和时间开销.</p>
+<blockquote>
+<p><img src="/img/201708/2017-08-25 2.19.10.png" alt="图1.5(来自原书截图)"></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; title=&quot;写在前面的话:&quot;&gt;&lt;/a&gt;写在前面的话:&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 
+      &lt;h2 id=&quot;第一章-渲染管线&quot;&gt;&lt;a href=&quot;#第一章-渲染管线&quot; class=&quot;headerlink&quot; title=&quot;第一章: 渲染管线&quot;&gt;&lt;/a&gt;第一章: 渲染管线&lt;/h2&gt;&lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;header
     
     </summary>
     
