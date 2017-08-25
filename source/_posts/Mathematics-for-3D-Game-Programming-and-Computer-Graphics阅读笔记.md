@@ -48,7 +48,6 @@ tags: OpenGL, 图形学
 
 
 
-
 [1_booksite]: http://www.mathfor3dgameprogramming.com/
 [2_double_swap]: https://baike.baidu.com/item/%E5%8F%8C%E7%BC%93%E5%86%B2/10953356?fr=aladdin
 [3_bumpmap]: https://en.wikipedia.org/wiki/Bump_mapping
