@@ -9,10 +9,10 @@
 <meta name="keywords" content="OpenGL, 图形学">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)">
-<meta property="og:url" content="https://zwting.github.io/2017/mf3gpacg-2.html">
+<meta property="og:url" content="http://www.zuowting.top/2017/mf3gpacg-2.html">
 <meta property="og:site_name" content="有想法更要有行动">
 <meta property="og:description" content="第二章: 向量写在前面的话: 本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!原书: Mathematics for 3D Game Programming and Computer Graphics, Third Edition   2.1 向量的属性 定义: 这里将向量定义为: 实数组成的n元组  不过大多数情况下, 这个n指的是2,">
-<meta property="og:updated_time" content="2017-08-25T08:23:55.000Z">
+<meta property="og:updated_time" content="2017-08-28T06:32:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)">
 <meta name="twitter:description" content="第二章: 向量写在前面的话: 本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!原书: Mathematics for 3D Game Programming and Computer Graphics, Third Edition   2.1 向量的属性 定义: 这里将向量定义为: 实数组成的n元组  不过大多数情况下, 这个n指的是2,">
@@ -272,8 +272,16 @@
 <p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
 </blockquote>
 </li>
+<li><p><code>n维向量V的模</code>是一个标量, 记做$\left \| V \right \|$, 计算公式如下:<br>$$<br>\left \| V \right \| = \sqrt{\sum_{i=1}^{n}V^2_i} \tag{2.6}<br>$$<br>向量的模也可以叫做向量的长度. 长度为一的向量叫做<code>unit vector(单位向量)</code>. 当$V$代表三维的点或者方向的时候, 公式(2.6)可以记作:<br>$$<br>\left \| V \right \| = \sqrt{V_x^2 + V_y^2 + V_z^2}\tag{2.7}<br>$$<br>一个向量$V$至少有一个分量不为0才能够被单位化, 做法就是用这个向量$V$乘以$\frac{1}{\left \| V \right \|}$. 这个操作通常被称为<code>normalization(单位化)</code>, 在3D图形学中应用的很广泛. 这里应该注意的就是<code>单位化</code>这儿术语和<code>normal vector(法向量)</code>这个术语并没有什么联系, <code>法向量</code>指的平面中垂直于这个平面的一个向量. 向量的模遵循以下定律:</p>
+<blockquote>
+<p><strong>定理2.2 给定一个标量$a$, 任意两个向量$P, Q$.</strong><br>(a). $\left \| P \right \| \geq 0$<br>(b). $P = 0 当且仅当 P = (0,0,\dots,0)$<br>(c). $\left \| aP \right \| =\left |a\right | \left \| P \right \|$<br>(d). $\left \| P + Q \right \| \leqslant \left \|P \right \| \left \|Q \right \|$</p>
+</blockquote>
+</li>
 </ul>
-<p>n维向量$V$的模是一个标量, 记做$\left \| V \right \|$</p>
+<h4 id="2-2-向量的点乘"><a href="#2-2-向量的点乘" class="headerlink" title="2.2 向量的点乘"></a>2.2 向量的点乘</h4><p>向量的点乘, 通常也叫做<code>scalar product(数量积) or inner product(內积)</code>, 在3D图形学中用的很广泛因为他可以衡量两个向量的方向相似程度</p>
+<ul>
+<li><code>向量的点乘法则</code>: n维向量$P, Q$的內积记作: $P \cdot Q$, 通过下面的公式来计算<br>$$<br>P \cdot Q = \sum^{n}_{i=1}P_iQ_i \tag{2.9}<br>$$<br>其实就是两个向量对应分量的乘积的和. 在三维空间中, 有如下公式:<br>$$P\cdot Q = P_xQ_x + P_yQ_y + P_zQ_z \tag{2.10}$$<br>$点乘P \cdot \Q$</li>
+</ul>
 
         
         </div>
@@ -284,7 +292,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/mf3gpacg-2.html" data-id="cj6rmmzih0005u4bopaz722eo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.zuowting.top/2017/mf3gpacg-2.html" data-id="cj6vsyb9a0008sxboa3kt7tlq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -352,7 +360,7 @@
 
             
     
-        <a href="https://zwting.github.io/2017/mf3gpacg-2.html#comments" class="article-comment-link">评论</a>
+        <a href="http://www.zuowting.top/2017/mf3gpacg-2.html#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -361,19 +369,19 @@
         
 <nav id="article-nav">
     
-        <a href="/2017/游戏编程模式-阅读笔记.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2017/mf3gpacg_1.html" id="article-nav-newer" class="article-nav-link-wrap">
             <strong class="article-nav-caption">上一篇</strong>
             <div class="article-nav-title">
                 
-                    [游戏编程模式]阅读笔记
+                    Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)
                 
             </div>
         </a>
     
     
-        <a href="/2017/mf3gpacg_1.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2017/Git学习.html" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</div>
+            <div class="article-nav-title">Git学习</div>
         </a>
     
 </nav>
@@ -423,25 +431,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/mf3gpacg-2.html" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/mf3gpacg-2.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a></p>
-                            <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/mf3gpacg_1.html" class="thumbnail">
     
     
@@ -454,6 +443,25 @@
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2017/mf3gpacg_1.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</a></p>
+                            <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/mf3gpacg-2.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/mf3gpacg-2.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a></p>
                             <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
                         </div>
                     </li>
@@ -554,11 +562,25 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 zwting<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+            &copy;
+            2017
+                zwting<br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
 </footer>
+<script>
+    (function() {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
         
     
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=214053"></script>

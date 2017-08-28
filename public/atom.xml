@@ -4,9 +4,9 @@
   <subtitle>事在人为</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://zwting.github.io/"/>
+  <link href="http://www.zuowting.top/"/>
   <updated>2017-08-24T06:10:53.000Z</updated>
-  <id>https://zwting.github.io/</id>
+  <id>http://www.zuowting.top/</id>
   
   <author>
     <name>zwting</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>[游戏编程模式]阅读笔记</title>
-    <link href="https://zwting.github.io/2017/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"/>
-    <id>https://zwting.github.io/2017/游戏编程模式-阅读笔记.html</id>
+    <link href="http://www.zuowting.top/2017/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html"/>
+    <id>http://www.zuowting.top/2017/游戏编程模式-阅读笔记.html</id>
     <published>2017-08-24T06:10:53.000Z</published>
     <updated>2017-08-24T06:10:53.000Z</updated>
     
@@ -30,53 +30,9 @@
   </entry>
   
   <entry>
-    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</title>
-    <link href="https://zwting.github.io/2017/mf3gpacg-2.html"/>
-    <id>https://zwting.github.io/2017/mf3gpacg-2.html</id>
-    <published>2017-08-24T06:08:28.000Z</published>
-    <updated>2017-08-25T08:23:55.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="第二章-向量"><a href="#第二章-向量" class="headerlink" title="第二章: 向量"></a>第二章: 向量</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
-<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
-</blockquote>
-<h4 id="2-1-向量的属性"><a href="#2-1-向量的属性" class="headerlink" title="2.1 向量的属性"></a>2.1 向量的属性</h4><ul>
-<li><code>定义</code>: 这里将向量定义为: <code>实数组成的n元组</code></li>
-</ul>
-<p>不过大多数情况下, 这个n指的是2, 3, 4, 一个n维向量可以记为:<br>$$V=(v_1,v_2,…,v_n) \tag{2.1}$$<br>$V_i$表示向量$V$的第i个分量, 通常情况下, 下标是这个分量所对应的坐标轴的名字. 例如: 一个三维向量$P$可以记为: $P_x,P_y,P_z$.</p>
-<ul>
-<li><p><code>列向量</code>: 可以使用1列n行来表示和(2.1)式等价的<code>列向量</code><br>$$V =<br>\begin{bmatrix}<br>v_1\\ v_2\\ \dots \\ v_n<br>\end{bmatrix} \tag{2.2}$$</p>
-</li>
-<li><p><code>行向量</code>: 可以用1行n列来表示和(2.1)等价的<code>行向量</code>, 同时他也是列向量(2.2)的<code>转置矩阵</code>(行变列)<br>$$V^T=<br>\begin{bmatrix}<br>v_1 &amp; v_2 &amp; \dots &amp; v_n<br>\end{bmatrix}\tag{2.3}$$</p>
-</li>
-<li><p><code>向量和标量相乘</code>: 分别用这个标量和向量的每一个分量相乘, 结果是一个向量<br>$$<br>aV=Va=(av_1,av_2,\dots,av_n) \tag{2.4}<br>$$</p>
-</li>
-<li><p><code>向量和向量的加法</code>: 每个分量分别相加, 结果是一个向量. 比如$P + Q$:<br>$$<br>P + Q = (p_1 + q_1,p_2 + q_2,\dots,p_n + q_n)<br>\tag{2.5}$$</p>
-</li>
-<li><p><code>向量和向量的减法</code>: $P - Q$可以认为是$P + (-Q)$</p>
-</li>
-<li><h4 id="向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立"><a href="#向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立" class="headerlink" title="向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立"></a>向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立</h4><blockquote>
-<p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
-</blockquote>
-</li>
-</ul>
-<p>n维向量$V$的模是一个标量, 记做$\left \| V \right \|$</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;第二章-向量&quot;&gt;&lt;a href=&quot;#第二章-向量&quot; class=&quot;headerlink&quot; title=&quot;第二章: 向量&quot;&gt;&lt;/a&gt;第二章: 向量&lt;/h2&gt;&lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; ti
-    
-    </summary>
-    
-    
-      <category term="OpenGL, 图形学" scheme="https://zwting.github.io/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</title>
-    <link href="https://zwting.github.io/2017/mf3gpacg_1.html"/>
-    <id>https://zwting.github.io/2017/mf3gpacg_1.html</id>
+    <link href="http://www.zuowting.top/2017/mf3gpacg_1.html"/>
+    <id>http://www.zuowting.top/2017/mf3gpacg_1.html</id>
     <published>2017-08-24T06:08:28.000Z</published>
     <updated>2017-08-25T06:29:16.000Z</updated>
     
@@ -123,14 +79,66 @@
     </summary>
     
     
-      <category term="OpenGL, 图形学" scheme="https://zwting.github.io/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="OpenGL, 图形学" scheme="http://www.zuowting.top/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</title>
+    <link href="http://www.zuowting.top/2017/mf3gpacg-2.html"/>
+    <id>http://www.zuowting.top/2017/mf3gpacg-2.html</id>
+    <published>2017-08-24T06:08:28.000Z</published>
+    <updated>2017-08-28T06:32:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第二章-向量"><a href="#第二章-向量" class="headerlink" title="第二章: 向量"></a>第二章: 向量</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
+<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
+</blockquote>
+<h4 id="2-1-向量的属性"><a href="#2-1-向量的属性" class="headerlink" title="2.1 向量的属性"></a>2.1 向量的属性</h4><ul>
+<li><code>定义</code>: 这里将向量定义为: <code>实数组成的n元组</code></li>
+</ul>
+<p>不过大多数情况下, 这个n指的是2, 3, 4, 一个n维向量可以记为:<br>$$V=(v_1,v_2,…,v_n) \tag{2.1}$$<br>$V_i$表示向量$V$的第i个分量, 通常情况下, 下标是这个分量所对应的坐标轴的名字. 例如: 一个三维向量$P$可以记为: $P_x,P_y,P_z$.</p>
+<ul>
+<li><p><code>列向量</code>: 可以使用1列n行来表示和(2.1)式等价的<code>列向量</code><br>$$V =<br>\begin{bmatrix}<br>v_1\\ v_2\\ \dots \\ v_n<br>\end{bmatrix} \tag{2.2}$$</p>
+</li>
+<li><p><code>行向量</code>: 可以用1行n列来表示和(2.1)等价的<code>行向量</code>, 同时他也是列向量(2.2)的<code>转置矩阵</code>(行变列)<br>$$V^T=<br>\begin{bmatrix}<br>v_1 &amp; v_2 &amp; \dots &amp; v_n<br>\end{bmatrix}\tag{2.3}$$</p>
+</li>
+<li><p><code>向量和标量相乘</code>: 分别用这个标量和向量的每一个分量相乘, 结果是一个向量<br>$$<br>aV=Va=(av_1,av_2,\dots,av_n) \tag{2.4}<br>$$</p>
+</li>
+<li><p><code>向量和向量的加法</code>: 每个分量分别相加, 结果是一个向量. 比如$P + Q$:<br>$$<br>P + Q = (p_1 + q_1,p_2 + q_2,\dots,p_n + q_n)<br>\tag{2.5}$$</p>
+</li>
+<li><p><code>向量和向量的减法</code>: $P - Q$可以认为是$P + (-Q)$</p>
+</li>
+<li><h4 id="向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立"><a href="#向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立" class="headerlink" title="向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立"></a>向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立</h4><blockquote>
+<p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
+</blockquote>
+</li>
+<li><p><code>n维向量V的模</code>是一个标量, 记做$\left \| V \right \|$, 计算公式如下:<br>$$<br>\left \| V \right \| = \sqrt{\sum_{i=1}^{n}V^2_i} \tag{2.6}<br>$$<br>向量的模也可以叫做向量的长度. 长度为一的向量叫做<code>unit vector(单位向量)</code>. 当$V$代表三维的点或者方向的时候, 公式(2.6)可以记作:<br>$$<br>\left \| V \right \| = \sqrt{V_x^2 + V_y^2 + V_z^2}\tag{2.7}<br>$$<br>一个向量$V$至少有一个分量不为0才能够被单位化, 做法就是用这个向量$V$乘以$\frac{1}{\left \| V \right \|}$. 这个操作通常被称为<code>normalization(单位化)</code>, 在3D图形学中应用的很广泛. 这里应该注意的就是<code>单位化</code>这儿术语和<code>normal vector(法向量)</code>这个术语并没有什么联系, <code>法向量</code>指的平面中垂直于这个平面的一个向量. 向量的模遵循以下定律:</p>
+<blockquote>
+<p><strong>定理2.2 给定一个标量$a$, 任意两个向量$P, Q$.</strong><br>(a). $\left \| P \right \| \geq 0$<br>(b). $P = 0 当且仅当 P = (0,0,\dots,0)$<br>(c). $\left \| aP \right \| =\left |a\right | \left \| P \right \|$<br>(d). $\left \| P + Q \right \| \leqslant \left \|P \right \| \left \|Q \right \|$</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-2-向量的点乘"><a href="#2-2-向量的点乘" class="headerlink" title="2.2 向量的点乘"></a>2.2 向量的点乘</h4><p>向量的点乘, 通常也叫做<code>scalar product(数量积) or inner product(內积)</code>, 在3D图形学中用的很广泛因为他可以衡量两个向量的方向相似程度</p>
+<ul>
+<li><code>向量的点乘法则</code>: n维向量$P, Q$的內积记作: $P \cdot Q$, 通过下面的公式来计算<br>$$<br>P \cdot Q = \sum^{n}_{i=1}P_iQ_i \tag{2.9}<br>$$<br>其实就是两个向量对应分量的乘积的和. 在三维空间中, 有如下公式:<br>$$P\cdot Q = P_xQ_x + P_yQ_y + P_zQ_z \tag{2.10}$$<br>$点乘P \cdot \Q$</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第二章-向量&quot;&gt;&lt;a href=&quot;#第二章-向量&quot; class=&quot;headerlink&quot; title=&quot;第二章: 向量&quot;&gt;&lt;/a&gt;第二章: 向量&lt;/h2&gt;&lt;h3 id=&quot;写在前面的话&quot;&gt;&lt;a href=&quot;#写在前面的话&quot; class=&quot;headerlink&quot; ti
+    
+    </summary>
+    
+    
+      <category term="OpenGL, 图形学" scheme="http://www.zuowting.top/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>Git学习</title>
-    <link href="https://zwting.github.io/2017/Git%E5%AD%A6%E4%B9%A0.html"/>
-    <id>https://zwting.github.io/2017/Git学习.html</id>
+    <link href="http://www.zuowting.top/2017/Git%E5%AD%A6%E4%B9%A0.html"/>
+    <id>http://www.zuowting.top/2017/Git学习.html</id>
     <published>2017-07-28T05:20:24.000Z</published>
     <updated>2017-08-21T03:03:40.000Z</updated>
     
@@ -196,14 +204,14 @@
     </summary>
     
     
-      <category term="工具;版本管理" scheme="https://zwting.github.io/tags/%E5%B7%A5%E5%85%B7-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+      <category term="工具;版本管理" scheme="http://www.zuowting.top/tags/%E5%B7%A5%E5%85%B7-%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</title>
-    <link href="https://zwting.github.io/2017/OpenGL-Learn-1.html"/>
-    <id>https://zwting.github.io/2017/OpenGL-Learn-1.html</id>
+    <link href="http://www.zuowting.top/2017/OpenGL-Learn-1.html"/>
+    <id>http://www.zuowting.top/2017/OpenGL-Learn-1.html</id>
     <published>2017-05-29T08:05:00.000Z</published>
     <updated>2017-07-06T05:40:22.000Z</updated>
     
@@ -253,7 +261,7 @@
     </summary>
     
     
-      <category term="OpenGL, 图形学" scheme="https://zwting.github.io/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="OpenGL, 图形学" scheme="http://www.zuowting.top/tags/OpenGL-%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
   </entry>
   

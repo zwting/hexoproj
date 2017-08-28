@@ -8,7 +8,7 @@
     <meta name="description" content="记录学习的点点滴滴">
 <meta property="og:type" content="website">
 <meta property="og:title" content="有想法更要有行动">
-<meta property="og:url" content="https://zwting.github.io/index.html">
+<meta property="og:url" content="http://www.zuowting.top/index.html">
 <meta property="og:site_name" content="有想法更要有行动">
 <meta property="og:description" content="记录学习的点点滴滴">
 <meta name="twitter:card" content="summary">
@@ -254,7 +254,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/游戏编程模式-阅读笔记.html" data-id="cj6rmmzi50003u4bof1yhxuiw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.zuowting.top/2017/游戏编程模式-阅读笔记.html" data-id="cj6vsyb940005sxboo9szok7u" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -322,157 +322,7 @@
 
             
     
-        <a href="https://zwting.github.io/2017/游戏编程模式-阅读笔记.html#comments" class="article-comment-link">评论</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-mf3gpacg-2" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/mf3gpacg-2.html">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/mf3gpacg-2.html">
-            <time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/OpenGL-图形学/">OpenGL, 图形学</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <h2 id="第二章-向量"><a href="#第二章-向量" class="headerlink" title="第二章: 向量"></a>第二章: 向量</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
-<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
-</blockquote>
-<h4 id="2-1-向量的属性"><a href="#2-1-向量的属性" class="headerlink" title="2.1 向量的属性"></a>2.1 向量的属性</h4><ul>
-<li><code>定义</code>: 这里将向量定义为: <code>实数组成的n元组</code></li>
-</ul>
-<p>不过大多数情况下, 这个n指的是2, 3, 4, 一个n维向量可以记为:<br>$$V=(v_1,v_2,…,v_n) \tag{2.1}$$<br>$V_i$表示向量$V$的第i个分量, 通常情况下, 下标是这个分量所对应的坐标轴的名字. 例如: 一个三维向量$P$可以记为: $P_x,P_y,P_z$.</p>
-<ul>
-<li><p><code>列向量</code>: 可以使用1列n行来表示和(2.1)式等价的<code>列向量</code><br>$$V =<br>\begin{bmatrix}<br>v_1\\ v_2\\ \dots \\ v_n<br>\end{bmatrix} \tag{2.2}$$</p>
-</li>
-<li><p><code>行向量</code>: 可以用1行n列来表示和(2.1)等价的<code>行向量</code>, 同时他也是列向量(2.2)的<code>转置矩阵</code>(行变列)<br>$$V^T=<br>\begin{bmatrix}<br>v_1 &amp; v_2 &amp; \dots &amp; v_n<br>\end{bmatrix}\tag{2.3}$$</p>
-</li>
-<li><p><code>向量和标量相乘</code>: 分别用这个标量和向量的每一个分量相乘, 结果是一个向量<br>$$<br>aV=Va=(av_1,av_2,\dots,av_n) \tag{2.4}<br>$$</p>
-</li>
-<li><p><code>向量和向量的加法</code>: 每个分量分别相加, 结果是一个向量. 比如$P + Q$:<br>$$<br>P + Q = (p_1 + q_1,p_2 + q_2,\dots,p_n + q_n)<br>\tag{2.5}$$</p>
-</li>
-<li><p><code>向量和向量的减法</code>: $P - Q$可以认为是$P + (-Q)$</p>
-</li>
-<li><h4 id="向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立"><a href="#向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立" class="headerlink" title="向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立"></a>向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立</h4><blockquote>
-<p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
-</blockquote>
-</li>
-</ul>
-<p>n维向量$V$的模是一个标量, 记做$\left \| V \right \|$</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zwting.github.io/2017/mf3gpacg-2.html" data-id="cj6rmmzih0005u4bopaz722eo" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zwting.github.io/2017/mf3gpacg-2.html#comments" class="article-comment-link">评论</a>
+        <a href="http://www.zuowting.top/2017/游戏编程模式-阅读笔记.html#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -564,7 +414,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/mf3gpacg_1.html" data-id="cj6rmmziq0008u4bowzsno2jd" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.zuowting.top/2017/mf3gpacg_1.html" data-id="cj6vsyb8x0004sxbobjlzw1s0" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -632,7 +482,165 @@
 
             
     
-        <a href="https://zwting.github.io/2017/mf3gpacg_1.html#comments" class="article-comment-link">评论</a>
+        <a href="http://www.zuowting.top/2017/mf3gpacg_1.html#comments" class="article-comment-link">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-mf3gpacg-2" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/mf3gpacg-2.html">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/mf3gpacg-2.html">
+            <time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/OpenGL-图形学/">OpenGL, 图形学</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h2 id="第二章-向量"><a href="#第二章-向量" class="headerlink" title="第二章: 向量"></a>第二章: 向量</h2><h3 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话:"></a>写在前面的话:</h3><blockquote>
+<p>本文基本等同于翻译(加上自己的理解), 笔者英语水平有限, 难免会出现错误, 望高手在评论中指出, 谢谢!<br>原书: <a href="http://www.mathfor3dgameprogramming.com/" target="_blank" rel="external">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> </p>
+</blockquote>
+<h4 id="2-1-向量的属性"><a href="#2-1-向量的属性" class="headerlink" title="2.1 向量的属性"></a>2.1 向量的属性</h4><ul>
+<li><code>定义</code>: 这里将向量定义为: <code>实数组成的n元组</code></li>
+</ul>
+<p>不过大多数情况下, 这个n指的是2, 3, 4, 一个n维向量可以记为:<br>$$V=(v_1,v_2,…,v_n) \tag{2.1}$$<br>$V_i$表示向量$V$的第i个分量, 通常情况下, 下标是这个分量所对应的坐标轴的名字. 例如: 一个三维向量$P$可以记为: $P_x,P_y,P_z$.</p>
+<ul>
+<li><p><code>列向量</code>: 可以使用1列n行来表示和(2.1)式等价的<code>列向量</code><br>$$V =<br>\begin{bmatrix}<br>v_1\\ v_2\\ \dots \\ v_n<br>\end{bmatrix} \tag{2.2}$$</p>
+</li>
+<li><p><code>行向量</code>: 可以用1行n列来表示和(2.1)等价的<code>行向量</code>, 同时他也是列向量(2.2)的<code>转置矩阵</code>(行变列)<br>$$V^T=<br>\begin{bmatrix}<br>v_1 &amp; v_2 &amp; \dots &amp; v_n<br>\end{bmatrix}\tag{2.3}$$</p>
+</li>
+<li><p><code>向量和标量相乘</code>: 分别用这个标量和向量的每一个分量相乘, 结果是一个向量<br>$$<br>aV=Va=(av_1,av_2,\dots,av_n) \tag{2.4}<br>$$</p>
+</li>
+<li><p><code>向量和向量的加法</code>: 每个分量分别相加, 结果是一个向量. 比如$P + Q$:<br>$$<br>P + Q = (p_1 + q_1,p_2 + q_2,\dots,p_n + q_n)<br>\tag{2.5}$$</p>
+</li>
+<li><p><code>向量和向量的减法</code>: $P - Q$可以认为是$P + (-Q)$</p>
+</li>
+<li><h4 id="向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立"><a href="#向量的运算法则-给定任意两个标量-a-b-任意三个向量-P-Q-R-以下定律成立" class="headerlink" title="向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立"></a>向量的运算法则: 给定任意两个标量$a,b$, 任意三个向量$P,Q,R$, 以下定律成立</h4><blockquote>
+<p>(a). $P + Q = Q + P$<br>(b). $(P + Q) + R = P + (Q + R)$<br>(c). $(ab)P = a(bP)$<br>(d). $a(P + Q) = aP + aQ$<br>(e). $(a + b)P = aP + bP$</p>
+</blockquote>
+</li>
+<li><p><code>n维向量V的模</code>是一个标量, 记做$\left \| V \right \|$, 计算公式如下:<br>$$<br>\left \| V \right \| = \sqrt{\sum_{i=1}^{n}V^2_i} \tag{2.6}<br>$$<br>向量的模也可以叫做向量的长度. 长度为一的向量叫做<code>unit vector(单位向量)</code>. 当$V$代表三维的点或者方向的时候, 公式(2.6)可以记作:<br>$$<br>\left \| V \right \| = \sqrt{V_x^2 + V_y^2 + V_z^2}\tag{2.7}<br>$$<br>一个向量$V$至少有一个分量不为0才能够被单位化, 做法就是用这个向量$V$乘以$\frac{1}{\left \| V \right \|}$. 这个操作通常被称为<code>normalization(单位化)</code>, 在3D图形学中应用的很广泛. 这里应该注意的就是<code>单位化</code>这儿术语和<code>normal vector(法向量)</code>这个术语并没有什么联系, <code>法向量</code>指的平面中垂直于这个平面的一个向量. 向量的模遵循以下定律:</p>
+<blockquote>
+<p><strong>定理2.2 给定一个标量$a$, 任意两个向量$P, Q$.</strong><br>(a). $\left \| P \right \| \geq 0$<br>(b). $P = 0 当且仅当 P = (0,0,\dots,0)$<br>(c). $\left \| aP \right \| =\left |a\right | \left \| P \right \|$<br>(d). $\left \| P + Q \right \| \leqslant \left \|P \right \| \left \|Q \right \|$</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-2-向量的点乘"><a href="#2-2-向量的点乘" class="headerlink" title="2.2 向量的点乘"></a>2.2 向量的点乘</h4><p>向量的点乘, 通常也叫做<code>scalar product(数量积) or inner product(內积)</code>, 在3D图形学中用的很广泛因为他可以衡量两个向量的方向相似程度</p>
+<ul>
+<li><code>向量的点乘法则</code>: n维向量$P, Q$的內积记作: $P \cdot Q$, 通过下面的公式来计算<br>$$<br>P \cdot Q = \sum^{n}_{i=1}P_iQ_i \tag{2.9}<br>$$<br>其实就是两个向量对应分量的乘积的和. 在三维空间中, 有如下公式:<br>$$P\cdot Q = P_xQ_x + P_yQ_y + P_zQ_z \tag{2.10}$$<br>$点乘P \cdot \Q$</li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://www.zuowting.top/2017/mf3gpacg-2.html" data-id="cj6vsyb9a0008sxboa3kt7tlq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://www.zuowting.top/2017/mf3gpacg-2.html#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -741,7 +749,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/Git学习.html" data-id="cj6rmmzhq0001u4bomsrceupi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.zuowting.top/2017/Git学习.html" data-id="cj6vsyb8u0003sxbor331r4ma" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -809,7 +817,7 @@
 
             
     
-        <a href="https://zwting.github.io/2017/Git学习.html#comments" class="article-comment-link">评论</a>
+        <a href="http://www.zuowting.top/2017/Git学习.html#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -903,7 +911,7 @@
 
 </div>
 
-    <a data-url="https://zwting.github.io/2017/OpenGL-Learn-1.html" data-id="cj6rmmzia0004u4booeks0s5q" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://www.zuowting.top/2017/OpenGL-Learn-1.html" data-id="cj6vsyb8g0001sxbo47y9mqs4" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -971,7 +979,7 @@
 
             
     
-        <a href="https://zwting.github.io/2017/OpenGL-Learn-1.html#comments" class="article-comment-link">评论</a>
+        <a href="http://www.zuowting.top/2017/OpenGL-Learn-1.html#comments" class="article-comment-link">评论</a>
     
 
         </footer>
@@ -1013,25 +1021,6 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/mf3gpacg-2.html" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/mf3gpacg-2.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a></p>
-                            <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2017/mf3gpacg_1.html" class="thumbnail">
     
     
@@ -1044,6 +1033,25 @@
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2017/mf3gpacg_1.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</a></p>
+                            <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/mf3gpacg-2.html" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/mf3gpacg-2.html" class="title">Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</a></p>
                             <p class="item-date"><time datetime="2017-08-24T06:08:28.000Z" itemprop="datePublished">2017-08-24</time></p>
                         </div>
                     </li>
@@ -1144,11 +1152,25 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 zwting<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+            &copy;
+            2017
+                zwting<br> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
 </footer>
+<script>
+    (function() {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
         
     
     <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=214053"></script>
