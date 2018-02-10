@@ -4,14 +4,14 @@
 
     
   <url>
-    <loc>http://www.zuowting.top/2017/mf3gpacg-2.html</loc>
-    <lastmod>2017-08-29T09:58:09.000Z</lastmod>
+    <loc>http://www.zuowting.top/2018/Unity3D%E7%89%B9%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F.html</loc>
+    <lastmod>2018-02-10T14:03:25.720Z</lastmod>
     <data>
         <display>
-        <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</title>
-        <pubTime>2017-08-24T06:08:28.000Z</pubTime>
+        <title>Unity3D特定文件的打开方式</title>
+        <pubTime>2018-02-10T13:49:52.000Z</pubTime>
         
-        <tag>OpenGL, 图形学</tag>
+        <tag>Unity3D</tag>
          
          
            
@@ -20,41 +20,10 @@
     </url>
 
     
-  <url>
-    <loc>http://www.zuowting.top/2017/mf3gpacg_1.html</loc>
-    <lastmod>2017-08-25T06:29:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</title>
-        <pubTime>2017-08-24T06:08:28.000Z</pubTime>
-        
-        <tag>OpenGL, 图形学</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.zuowting.top/2017/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html</loc>
-    <lastmod>2017-08-24T06:10:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>[游戏编程模式]阅读笔记</title>
-        <pubTime>2017-08-24T06:10:53.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://www.zuowting.top/2017/Git%E5%AD%A6%E4%B9%A0.html</loc>
-    <lastmod>2017-08-21T03:03:40.000Z</lastmod>
+    <lastmod>2018-02-09T11:43:09.636Z</lastmod>
     <data>
         <display>
         <title>Git学习</title>
@@ -71,11 +40,60 @@
     
   <url>
     <loc>http://www.zuowting.top/2017/OpenGL-Learn-1.html</loc>
-    <lastmod>2017-07-06T05:40:22.000Z</lastmod>
+    <lastmod>2018-02-09T11:43:09.636Z</lastmod>
     <data>
         <display>
         <title>OpenGL学习笔记(一)--window下VS2013环境搭建OpenGL开发环境</title>
         <pubTime>2017-05-29T08:05:00.000Z</pubTime>
+        
+        <tag>OpenGL, 图形学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zuowting.top/2017/mf3gpacg-2.html</loc>
+    <lastmod>2018-02-09T11:43:09.636Z</lastmod>
+    <data>
+        <display>
+        <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(二)</title>
+        <pubTime>2017-08-24T06:08:28.000Z</pubTime>
+        
+        <tag>OpenGL, 图形学</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zuowting.top/2017/%E6%B8%B8%E6%88%8F%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%BC%8F-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0.html</loc>
+    <lastmod>2018-02-09T11:43:09.636Z</lastmod>
+    <data>
+        <display>
+        <title>[游戏编程模式]阅读笔记</title>
+        <pubTime>2017-08-24T06:10:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.zuowting.top/2017/mf3gpacg_1.html</loc>
+    <lastmod>2018-02-09T11:43:09.636Z</lastmod>
+    <data>
+        <display>
+        <title>Mathematics.for.3D.Game.Programming.and.Computer.Graphics阅读笔记(一)</title>
+        <pubTime>2017-08-24T06:08:28.000Z</pubTime>
         
         <tag>OpenGL, 图形学</tag>
          
