@@ -72,6 +72,7 @@ deploy:
   type: git
   repository: git@github.com:zwting/zwting.github.io.git
   branch: master
+  
 
 # This is the Plugin admin configuration
 #admin authentification
