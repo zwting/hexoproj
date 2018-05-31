@@ -58,6 +58,28 @@ struct SurfaceOutputStandardSpecular
 
 ##### 必选参数
 + `surfaceFunction`: 这个参数就是我们的表面函数了，它的函数签名是`void surf (Input IN, inout SurfaceOutput o)`。这里的`Input`类型是一个需要自己去定义的结构体(需要遵循它的标准，准确地说是去定制)。这个结构里面应该包含纹理坐标和表面函数所需要的一些额外字段。
++ `lightModel`: 光照模型，就是指定shader所使用的光照模型。内置的有基于物理的`Standard`和`StandardSpecular`,当然，也可以使用不基于物理的`Lambert(diffuse)`和`BlinnPhong(specular)`。
+
+##### 可选参数
+可选参数比较多，这里不一一列出来，需要[点我查看][1_unity_surface_shader_ref]
+
+##### 表面着色器的输入结构
+表面着色器的输入结构`Input`通常有一个shader所需要的纹理。需要注意的是，纹理坐标字段的名字必须以`"uv"`开头(或者以`"uv2"`开头标识第二个纹理坐标)。
+下面的列表展示了`Input`结构的可选额外字段
++ `float3 viewDir`: 顾名思义，这个字段表示了当前视角方向，即表示摄像机的正前方的向量。通常用来计算一些视差效果和边缘光的效果等。
++ `float4 : COLOR`: 带有`COLOR`语义的字段，表示每个顶点的颜色，顶点之间采用差值来确定颜色。
++ `float4 screenPos`: 表示屏幕空间的位置，主要用来反射效果或者屏幕空间的效果实现。
++ `float3 wordPos`: 在世界空间的位置。
++ `float3 worldRefl`: 如果`surface shader`不写`o.Normal`那么将表示世界空间中的反射向量。
++ `float3 worldNormal`: 如果`surface shader`不写`o.Normal`,那么用来表示世界空间中的法向量。
++ `float3 wroldRefl`: 如果`surface shader`写了`o.Normal`, 那么这个字段表示世界空间中的反射向量。如果想要获取逐像素法线贴图的反射向量，使用`WorldReflectionVector (IN, o.Normal)`
++ `float3 worldNormal`: 如果`surface shader`写了`o.Normal`, 那么这个字段表示世界空间的法向量。如果想获取逐像素法线贴图的法向量，使用`WorldNormalVector (IN, o.Normal)` 
+
+
 
 
 （未完，待续）
+
+
+
+[1_unity_surface_shader_ref]: https://docs.unity3d.com/Manual/SL-SurfaceShaders.html
