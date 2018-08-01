@@ -4,15 +4,32 @@ date: 2017-07-28 13:20:24
 tags: 工具;版本管理
 comment: true
 ---
-### 一. 初始化
+### 一. 配置
 
+#### 初始化一个Git仓库
 + 初始化当前目录为一个git仓库:  `git init`
-+ 设置git账户:
 
+#### 全局设置
+
++ 设置git账户:
 ```git
 git config --global user.name "You Name"
 git config --global user.email "your email address"
 ```
+
++ 检查配置信息 
+```
+git config --list
+```
+可以列出Git当时能找到的所有配置
+
+
++ 指定文本编辑器  
+``` git
+git config --global core.editor emacs
+```
+`--global`可选参数，表示这个设置是全局的还是针对本仓库的
+
 
 ### 二. 仓库操作
 
